@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/c3fc1e631d.js" crossorigin="anonymous"></script>
+    {% endblock %}
+</head>
+<body style="font-family: 'Fredoka', sans-serif;">
+ <div class="container-md">
+     <div class="row align-content-center">
+         <div class="col-4"></div>
+         <div class="col-4 mt-5" >
+             <form style="margin-top: 150px;" method="post">
+                 <fieldset>
+                     <legend>Authentication</legend>
+                     <div class="form-group mt-5">
+                         <label for="email" class="form-label mt-4">Email address</label>
+                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                     </div>
+                     <div class="form-group">
+                         <label for="password" class="form-label mt-4">Password</label>
+                         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                     </div>
+                 </fieldset>
+                 <button type="submit" class="btn btn-dark" style="width: 120px;">Login</button>
+             </form>
+         </div>
+     </div>
+ </div>
+</body>
+</html>
