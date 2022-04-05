@@ -1,20 +1,39 @@
-{% extends 'base.html.twig' %}
+{% extends 'backNavBar.html.twig' %}
 
-{% block title %}Hello UserController!{% endblock %}
+{% block title %}Hello Admins!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/nouhailagourram/CrowndFunding_Backend/src/Controller/UserController.php'|file_link(0) }}">src/Controller/UserController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/nouhailagourram/CrowndFunding_Backend/templates/user/index.html.twig'|file_link(0) }}">templates/user/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="container">
+        <div class="row text-center mb-5 mt-5">
+            <h2>List of admins accounts</h2>
+        </div>
+        <div>
+            <div>
+                <a href="#" class="btn btn-secondary mb-3 mt-3">Create New</a>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-secondary">
+                <thead>
+                <tr>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr class="table-light">
+                            <td>{{ user.firstname }}</td>
+                            <td>{{ user.lastname }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>*********</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

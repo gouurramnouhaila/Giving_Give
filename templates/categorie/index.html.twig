@@ -1,37 +1,43 @@
-{% extends 'base.html.twig' %}
+{% extends 'backNavBar.html.twig' %}
 
 {% block title %}Hello Categories!{% endblock %}
 
 {% block body %}
 
-    <div class="container">
-         <div class="row text-center mb-5 mt-5">
-             <h2>List of category</h2>
-         </div>
-        <div>
-            <div>
-                <a href="{{ path('app_category_new') }}" class="btn btn-secondary mb-3 mt-3">Create New</a>
-            </div>
-        </div>
-        <div class="row">
-            {% for category in categories %}
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            <p class="card-text">{{ category.titre }}</p>
-                            <p class="card-text">{{ category.description }}</p>
-                            <small class="text-muted">{{ category.name }}</small>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
-                                    <a href="{{ path('app_categorie_supp', {'id' : category.id}) }}" onclick="confirm('Are you sure ?')" class="btn btn-sm btn-outline-secondary">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+  <div class="container row-cols-10 mt-5">
+    <table class="table mt-lg-5">
+      <thead>
+      <tr class="table-secondary p-4">
+        <th  class="text-center p-4" colspan="6">Categories Setting</th>
+      </tr>
+      <tr class="table-active">
+        <th scope="col" class="p-4">Name</th>
+        <th scope="col" class="p-4">Title</th>
+        <th scope="col" class="p-4">Description</th>
+        <th scope="col" class="p-4">Edit</th>
+        <th scope="col" class="p-4">Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for category in categories %}
+        <tr class="table-light">
+          <td class="p-3">{{ category.name}}</td>
+          <td class="p-3">{{ category.title}}</td>
+          <td class="p-3">{{ category.description}}</td>
+          <td class="p-3">
+            <a href="#" class="text-muted">
+              <i class="bi bi-pen-fill"></i>
+            </a>
+          </td>
+          <td class="p-3">
+            <a href="#" class="text-muted">
+              <i class="bi bi-trash-fill"></i>
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
 {% endblock %}

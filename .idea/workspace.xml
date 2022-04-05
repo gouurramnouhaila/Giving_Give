@@ -2,33 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0479a2d3-3d46-4a86-bf46-a5690ec91ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/zenstruck_foundry.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/zenstruck_foundry.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo/LogoGivingGive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CategorieController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factory/CategorieFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/details.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributorRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Factory/CategorieFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categorie/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategorieController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/DataFixtures/CategorieFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factory/CategorieFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategorieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/CategoriesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/FormLoginAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/FormLoginAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_detailsNavbar.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categorie/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categorie/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,10 +209,11 @@
       <recent name="$PROJECT_DIR$/templates/user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Infrastructure" />
+      <recent name="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation" />
       <recent name="$PROJECT_DIR$/public/logo" />
       <recent name="$PROJECT_DIR$/public/css/images" />
       <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -266,7 +267,23 @@
       <workItem from="1646418257384" duration="1111000" />
       <workItem from="1646426359786" duration="1736000" />
       <workItem from="1647181068807" duration="654000" />
-      <workItem from="1647458276153" duration="680000" />
+      <workItem from="1647458276153" duration="1147000" />
+      <workItem from="1647459761215" duration="103000" />
+      <workItem from="1647459875910" duration="8000" />
+      <workItem from="1647788709761" duration="1163000" />
+      <workItem from="1647793530743" duration="1771000" />
+      <workItem from="1647795426373" duration="1047000" />
+      <workItem from="1647943407791" duration="12000" />
+      <workItem from="1648377709322" duration="1392000" />
+      <workItem from="1648379283448" duration="1739000" />
+      <workItem from="1648381111404" duration="396000" />
+      <workItem from="1648411838222" duration="229000" />
+      <workItem from="1648739664332" duration="412000" />
+      <workItem from="1648755660761" duration="11000" />
+      <workItem from="1648827605475" duration="17000" />
+      <workItem from="1649171696954" duration="1635000" />
+      <workItem from="1649173791006" duration="1480000" />
+      <workItem from="1649179536290" duration="306000" />
     </task>
     <servers />
   </component>
@@ -278,19 +295,36 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="349" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1646418740950" />
+    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1649172371762">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1649172371762" />
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647789533491">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1647789533491" />
     <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1646343716582">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1646343716582" />
+    <state x="319" y="232" key="NewPhpClassDialog" timestamp="1649179770362">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="319" y="232" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179770362" />
+    <state x="461" y="334" key="NewPhpFileDialog" timestamp="1649179619260">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="461" y="334" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179619260" />
     <state x="149" y="39" key="SettingsEditor" timestamp="1646152012898">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1646152012898" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1647181113161">
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1649179536738">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1647181113161" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.717@0.23.1280.717" timestamp="1646128588482" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179536738" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.717@0.23.1280.717" timestamp="1648381116570" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.722@0.23.1280.722" timestamp="1647793501412" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.724@0.23.1280.724" timestamp="1646332495708" />
   </component>
 </project>
