@@ -4,11 +4,13 @@
 namespace App\Domain\Project\UseCase\AddProject;
 
 
+use App\Domain\Project\Entities\Project;
+
 interface AddProjectPresenterInterface
 {
     /**
      * @param AddProjectResponse $projectResponse
-     * @return mixed
+     * @return void
      */
-    public function present(AddProjectResponse $projectResponse);
+    public function present(Project $projectResponse): void ;
 }

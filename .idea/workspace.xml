@@ -2,33 +2,297 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0479a2d3-3d46-4a86-bf46-a5690ec91ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributorRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Factory/CategorieFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Don/Adapters/Gateway/Doctrine/DoctrineDonRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Don/Adapters/Gateway/Doctrine/Don.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Don/Entities/Don.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Don/Entities/DonReposirtory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/AddQuestion/AddQuestionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/AddQuestion/AddQuestionHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/DeleteQuestion/DeleteQuestionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/DeleteQuestion/DeleteQuestionHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/UpDateQuestion/UpDateQuestionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Question/UpDateQuestion/UpDateQuestionHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/AddResponse/AddResponseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/AddResponse/AddResponseHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/DeleteResponse/DeleteResponseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/DeleteResponse/DeleteResponseHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/UpDateResponse/UpDateResponseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Adapters/Controllers/Response/UpDateResponse/UpDateResponseHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Entities/Question.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/Entities/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/AddQuestion/AddQuestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/AddQuestion/AddQuestionPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/DeleteQuestion/DeleteQuestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/DeleteQuestion/DeleteQuestionPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/UpDateQuestion/UpDateQuestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/UpDateQuestion/UpDateQuestionPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/AddResponse/AddResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/AddResponse/AddResponsePresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/DeleteResponse/DeleteResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/DeleteResponse/DeleteResponsePresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/DeleteResponse/DeleteResponseRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/DeleteResponse/DeleteResponseResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/UpDateResponse/UpDateResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/UpDateResponse/UpDateResponsePresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationHtmlPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway/Doctrine/DoctrineNotificationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway/Doctrine/Notification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Entities/Notification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Entities/NotificationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/createNotification/CreateNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/createNotification/CreateNotificationPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/createNotification/CreateNotificationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/AcceptProject/AcceptProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/AddProject/AddProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/AddProject/AddProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/DeleteProject/DeleteProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/DeleteProject/DeleteProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/FindProject/FindProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/FindProject/FindProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/RejectProject/RejectProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/SearchProject/SearchProjectJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/UpDateProject/UpDateProjetJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Gateway/Doctrine/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Gateway/Doctrine/DoctrineCategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Gateway/Doctrine/DoctrineProjectRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Gateway/Doctrine/Project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Gateway/ProjectFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Entities/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Entities/CategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Entities/Exceptions/ProjectNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Entities/Project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Entities/ProjectRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Frameworks/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Frameworks/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/Frameworks/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/AddCategory/AddCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/AddCategory/AddCategoryPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/AddCategory/AddCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/AddCategory/AddCategoryResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/DeleteCategory/DeleteCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/DeleteCategory/DeleteCategoryPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/DeleteCategory/DeleteCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/DeleteCategory/DeleteCategoryResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/UpDateCategory/UpDateCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/UpDateCategory/UpDateCategoryPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/UpDateCategory/UpDateCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Category/UpDateCategory/UpDateCategoryResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/FindProject/FindProject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/FindProject/FindProjectPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/FindProject/FindProjectRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/Gateway/ProjectFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/AddAdmin/AddAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/AddAdmin/AddAdminJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/DeleteAdmin/DeleteAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/DeleteAdmin/DeleteAdminJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/FindAdmin/FindAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/FindAdmin/FindAdminJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/FindAllAdmin/FindAllAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/FindAllAdmin/FindAllAdminJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/UpdateAdmin/UpdateAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Admin/UpdateAdmin/UpdateAdminJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/AddContributor/AddContributorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/AddContributor/AddContributorJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/DeleteContributor/DeleteContributorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/DeleteContributor/DeleteContributorJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/FindAllContributor/FindAllContributorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/FindAllContributor/FindAllContributorJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/FindContributor/FindContributorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/FindContributor/FindContributorJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/UpdateContributor/UpdateContributorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/Contributor/UpdateContributor/UpdateContributorJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/AddProjectHolder/AddProjectHolderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/AddProjectHolder/AddProjectHolderJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/FindAllProjectHolder/FindAllProjectHolderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/FindAllProjectHolder/FindAllProjectHolderJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/FindProjectHolder/FindProjectHolderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/FindProjectHolder/FindProjectHolderJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderJsonPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/Contributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/DoctrineAdminRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/DoctrineContributorRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/DoctrineProjectHolderRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Adapters/Gateway/Doctrine/ProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/AdminRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/Contributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/ContributorRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/ProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Entities/ProjectHolderRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Frameworks/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Frameworks/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/Frameworks/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/AddAdmin/AddAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/AddAdmin/AddAdminPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/AddAdmin/AddAdminRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/DeleteAdmin/DeleteAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/DeleteAdmin/DeleteAdminPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/DeleteAdmin/DeleteAdminRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/DeleteAdmin/DeleteAdminResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAdmin/FindAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAdmin/FindAdminRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAdmin/FindAdminpresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAllAdmin/FindAllAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAllAdmin/FindAllAdminPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAllAdmin/FindAllAdminResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/UpdateAdmin/UpdateAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/UpdateAdmin/UpdateAdminPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/UpdateAdmin/UpdateAdminRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/AddContributor/AddContributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/AddContributor/AddContributorPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/AddContributor/AddContributorRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/DeleteContributor/DeleteContributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/DeleteContributor/DeleteContributorPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/DeleteContributor/DeleteContributorRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/DeleteContributor/DeleteContributorResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindAllContributor/FindAllContributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindAllContributor/FindAllContributorPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindAllContributor/FindAllContributorResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindContributor/FindContributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindContributor/FindContributorPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/FindContributor/FindContributorRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/UpDateContributor/UpdateContributor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/UpDateContributor/UpdateContributorPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/UpDateContributor/UpdateContributorRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/AddProjectHolder/AddProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/AddProjectHolder/AddProjectHolderPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/DeleteProjectHolder/DeleteProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindAllProjectHolder/FindAllProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindAllProjectHolder/FindAllProjectHolderPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindAllProjectHolder/FindAllProjectHolderResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindProjectHolder/FindProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindProjectHolder/FindProjectHolderPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/FindProjectHolder/FindProjectHolderRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/UpDateProjectHolder/UpDateProjectHolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderPresenterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategorieController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/DataFixtures/CategorieFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/CategorieFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategorieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/CategoriesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/FormLoginAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/FormLoginAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_detailsNavbar.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categorie/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categorie/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220219214332.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220304104927.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220304183046.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220320151747.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220327112613.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/Adapter/Presenter/MakeDonationPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/Adapters/Controllers/MakeDonation/MakeDonationHtmlPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/Adapter/controller/MakeDonationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/Adapters/Controllers/MakeDonation/MakeDonationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation/MakeDonation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/UseCases/MakeDonation/MakeDonation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation/MakeDonationPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/UseCases/MakeDonation/MakeDonationPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation/MakeDonationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/UseCases/MakeDonation/MakeDonationRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation/MakeDonationResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/UseCases/MakeDonation/MakeDonationResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/AddQuestion/AddQuestion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/AddQuestion/AddQuestionPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/AddQuestion/AddQuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/AddQuestion/AddQuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/AddQuestion/AddQuestionResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/AddQuestion/AddQuestionResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/DeleteQuestion/DeleteQuestion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/DeleteQuestion/DeleteQuestionPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/DeleteQuestion/DeleteQuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/DeleteQuestion/DeleteQuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/DeleteQuestion/DeleteQuestionResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/DeleteQuestion/DeleteQuestionResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/UpDateQuestion/UpDateQuestion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/UpDateQuestion/UpDateQuestionPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/UpDateQuestion/UpDateQuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/UpDateQuestion/UpDateQuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Question/UpDateQuestion/UpDateQuestionResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Question/UpDateQuestion/UpDateQuestionResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/AddResponse/AddResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/AddResponse/AddResponsePresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/AddResponse/AddResponseRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/AddResponse/AddResponseRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/AddResponse/AddResponseResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/AddResponse/AddResponseResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/UpDateResponse/UpDateResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/UpDateResponse/UpDateResponsePresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/UpDateResponse/UpDateResponseRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/UpDateResponse/UpDateResponseRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/FAQ/Response/UpDateResponse/UpDateResponseResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/FAQ/UseCases/Response/UpDateResponse/UpDateResponseResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/AcceptProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/AcceptProject/AcceptProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/AddProjectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/DeleteProjectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/ListProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/RejectProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/RejectProject/RejectProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/SearchProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/SearchProject/SearchProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapter/controller/UpDateProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/UpDateProject/UpDateProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AcceptProject/AcceptProjectResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/AddProject/AddProjectResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/DeleteProject/DeleteProjectResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectsPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectsPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectsResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/ListProjects/ListProjectsResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/RejectProject/RejectProjectResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearcProjectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProjectResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/SearchProject/SearchProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProjectPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProjectPresenterInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProjectRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProjectRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/UseCase/UpDateProject/UpDateProjectResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributorPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributorRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/AddContributor/AddContributorResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/DeleteContributor/DeleteContributor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/DeleteContributor/DeleteContributorPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/DeleteContributor/DeleteContributorRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/DeleteContributor/DeleteContributorResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/UpDateContributor/UpDateContributor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/UpDateContributor/UpDateContributorPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/UpDateContributor/UpDateContributorRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/Contributor/UpDateContributor/UpDateContributorResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/AddProjectHolder/AddProjectHolder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/AddProjectHolder/AddProjectHolderPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/AddProjectHolder/AddProjectHolderRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/AddProjectHolder/AddProjectHolderRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/AddProjectHolder/AddProjectHolderResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/DeleteProjectHolder/DeleteProjectHolder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/User/UseCases/ProjectHolder/DeleteProjectHolder/DeleteProjectHolderResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/UpDateProjectHolder/UpDateProjectHolder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderPresenterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/User/ProjectHolder/UpDateProjectHolder/UpDateProjectHolderResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Entity/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Factory/CategorieFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Factory/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Form/CategoryType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Form/UserType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Repository/CategoriesRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Repository/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/FormLoginAuthenticator.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,144 +317,146 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/vendor/psr/link" />
-      <path value="$PROJECT_DIR$/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/zenstruck/assert" />
       <path value="$PROJECT_DIR$/vendor/zenstruck/callback" />
-      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/zenstruck/foundry" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
   <component name="ProjectId" id="25LVrNEU5k2YlyRd4aaLCcdkibu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -200,20 +466,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Domain/Notification/Frameworks" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/user" />
+      <recent name="$PROJECT_DIR$/src/Domain/Notification/Frameworks" />
+      <recent name="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor" />
+      <recent name="$PROJECT_DIR$/src/Domain/Project/Frameworks" />
+      <recent name="$PROJECT_DIR$/src/Domain/User" />
+      <recent name="$PROJECT_DIR$/src/Domain/User/Frameworks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Infrastructure" />
-      <recent name="$PROJECT_DIR$/src/Domain/Don/UseCase/MakeDonation" />
-      <recent name="$PROJECT_DIR$/public/logo" />
-      <recent name="$PROJECT_DIR$/public/css/images" />
-      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway" />
+      <recent name="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/AddContributor" />
+      <recent name="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder" />
+      <recent name="$PROJECT_DIR$/src/Domain/User/UseCases/Admin/FindAllAdmin" />
+      <recent name="$PROJECT_DIR$/src/Domain/Project/UseCase/Category" />
     </key>
   </component>
   <component name="RunManager">
@@ -284,6 +555,82 @@
       <workItem from="1649171696954" duration="1635000" />
       <workItem from="1649173791006" duration="1480000" />
       <workItem from="1649179536290" duration="306000" />
+      <workItem from="1649196105166" duration="671000" />
+      <workItem from="1649196812712" duration="935000" />
+      <workItem from="1649198625270" duration="1210000" />
+      <workItem from="1649200449102" duration="1520000" />
+      <workItem from="1649202325474" duration="728000" />
+      <workItem from="1649241881620" duration="126000" />
+      <workItem from="1649278689420" duration="1799000" />
+      <workItem from="1649280514454" duration="650000" />
+      <workItem from="1649287202246" duration="1715000" />
+      <workItem from="1649289011413" duration="708000" />
+      <workItem from="1649326235833" duration="543000" />
+      <workItem from="1649334032349" duration="1047000" />
+      <workItem from="1649336126540" duration="1785000" />
+      <workItem from="1649337938585" duration="1822000" />
+      <workItem from="1649340546963" duration="686000" />
+      <workItem from="1649349386444" duration="1142000" />
+      <workItem from="1649542457322" duration="354000" />
+      <workItem from="1649593665224" duration="1094000" />
+      <workItem from="1649595478453" duration="909000" />
+      <workItem from="1649638882520" duration="824000" />
+      <workItem from="1649679834837" duration="213000" />
+      <workItem from="1649692322783" duration="1444000" />
+      <workItem from="1649694162353" duration="1743000" />
+      <workItem from="1649717195743" duration="1512000" />
+      <workItem from="1649802773441" duration="1427000" />
+      <workItem from="1649806457626" duration="1387000" />
+      <workItem from="1649943004382" duration="1054000" />
+      <workItem from="1649944886786" duration="463000" />
+      <workItem from="1649956942178" duration="1784000" />
+      <workItem from="1649959529530" duration="1368000" />
+      <workItem from="1649975155193" duration="1402000" />
+      <workItem from="1649977061898" duration="368000" />
+      <workItem from="1649979665419" duration="800000" />
+      <workItem from="1649980798938" duration="4451000" />
+      <workItem from="1650148593541" duration="6778000" />
+      <workItem from="1650204967301" duration="4381000" />
+      <workItem from="1650545074891" duration="4103000" />
+      <workItem from="1650550331535" duration="142000" />
+      <workItem from="1650581940403" duration="3337000" />
+      <workItem from="1650639348631" duration="394000" />
+      <workItem from="1650650629808" duration="1029000" />
+      <workItem from="1650651663675" duration="4942000" />
+      <workItem from="1650723137741" duration="4557000" />
+      <workItem from="1650813200344" duration="2882000" />
+      <workItem from="1650817074660" duration="1803000" />
+      <workItem from="1650819899520" duration="1031000" />
+      <workItem from="1651105237731" duration="170000" />
+      <workItem from="1651105855529" duration="1910000" />
+      <workItem from="1651149657015" duration="4000" />
+      <workItem from="1651244456059" duration="4713000" />
+      <workItem from="1651252008985" duration="7253000" />
+      <workItem from="1651322518165" duration="262000" />
+      <workItem from="1652121792598" duration="4041000" />
+      <workItem from="1652180577221" duration="2159000" />
+      <workItem from="1652201154041" duration="2942000" />
+      <workItem from="1652273643663" duration="621000" />
+      <workItem from="1652291191727" duration="537000" />
+      <workItem from="1652394447261" duration="506000" />
+      <workItem from="1652547535248" duration="3930000" />
+      <workItem from="1652607817616" duration="2689000" />
+      <workItem from="1652779681996" duration="59000" />
+      <workItem from="1652799509103" duration="134000" />
+      <workItem from="1652876592231" duration="2465000" />
+      <workItem from="1652909799371" duration="1160000" />
+      <workItem from="1652911068048" duration="361000" />
+      <workItem from="1652949016557" duration="285000" />
+      <workItem from="1652965650691" duration="225000" />
+      <workItem from="1652966574943" duration="4963000" />
+      <workItem from="1652983410656" duration="16000" />
+      <workItem from="1653932009992" duration="2835000" />
+      <workItem from="1653937778653" duration="2426000" />
+      <workItem from="1654113916577" duration="4913000" />
+      <workItem from="1654165005650" duration="196000" />
+      <workItem from="1654254888208" duration="5996000" />
+      <workItem from="1654343395014" duration="6716000" />
+      <workItem from="1654424959207" duration="4477000" />
     </task>
     <servers />
   </component>
@@ -295,22 +642,31 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="349" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1646418740950" />
-    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1649172371762">
+    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1654433211494">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1649172371762" />
-    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647789533491">
+    <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1654433211494" />
+    <state x="453" y="135" key="#com.intellij.ide.util.MemberChooser/0.23.1280.725@0.23.1280.725" timestamp="1650732421913" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1653934143349">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1647789533491" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1653934143349" />
     <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1646343716582">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1646343716582" />
-    <state x="319" y="232" key="NewPhpClassDialog" timestamp="1649179770362">
+    <state x="378" y="163" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1654432427341">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="319" y="232" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179770362" />
+    <state x="378" y="163" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1654432427341" />
+    <state x="333" y="253" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1652394707000">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="333" y="253" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1652394707000" />
+    <state x="316" y="158" key="NewPhpClassDialog" timestamp="1654433373172">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="316" y="158" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1654433373172" />
     <state x="461" y="334" key="NewPhpFileDialog" timestamp="1649179619260">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -319,12 +675,29 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1646152012898" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1649179536738">
+    <state width="512" height="445" key="SwitcherDM" timestamp="1654255889000">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179536738" />
+    <state width="512" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1654255889000" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1654457578969">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1654457578969" />
+    <state x="296" y="233" key="com.intellij.ide.util.TipDialog/0.23.1280.712@0.23.1280.712" timestamp="1652607884392" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.714@0.23.1280.714" timestamp="1652876592265" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1654344382113" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.717@0.23.1280.717" timestamp="1648381116570" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.722@0.23.1280.722" timestamp="1647793501412" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.722@0.23.1280.722" timestamp="1649980798761" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.724@0.23.1280.724" timestamp="1646332495708" />
+    <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.725@0.23.1280.725" timestamp="1649942999111" />
+    <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.726@0.23.1280.726" timestamp="1652394554494" />
+    <state x="0" y="0" width="824" height="800" key="find.popup" timestamp="1654431523996">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="0" y="0" width="824" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1654431523996" />
+    <state x="402" y="8" key="refactoring.ChangeSignatureDialog" timestamp="1650662965643">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="402" y="8" key="refactoring.ChangeSignatureDialog/0.0.1280.800@0.0.1280.800" timestamp="1650662965643" />
   </component>
 </project>

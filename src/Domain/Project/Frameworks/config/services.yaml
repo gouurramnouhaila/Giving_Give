@@ -1,0 +1,42 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Domain\Project\:
+    resource: '../../../Project/*'
+    exclude: '../../../Project/{Frameworks,Tests}'
+
+
+  App\Domain\Project\Adapters\Controllers\AddProject\:
+    resource: '../../../Project/Adapters/Controllers/AddProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\DeleteProject\:
+    resource: '../../../Project/Adapters/Controllers/DeleteProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\UpDateProject\:
+    resource: '../../../Project/Adapters/Controllers/UpDateProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\FindProject\:
+    resource: '../../../Project/Adapters/Controllers/FindProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\ListProject\:
+    resource: '../../../Project/Adapters/Controllers/ListProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\SearchProject\:
+    resource: '../../../Project/Adapters/Controllers/SearchProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\AcceptProject\:
+    resource: '../../../Project/Adapters/Controllers/AcceptProject'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\RejectProject\:
+    resource: '../../../Project/Adapters/Controllers/RejectProject'
+    tags: ['controller.service_arguments']
+

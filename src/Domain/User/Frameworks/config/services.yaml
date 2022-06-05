@@ -1,0 +1,78 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Domain\User\:
+    resource: '../../../User/*'
+    exclude: '../../../User/{Frameworks,Tests}'
+
+
+  App\Domain\User\Adapters\Controllers\ProjectHolder\AddProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/ProjectHolder/AddProjectHolder/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\ProjectHolder\UpDateProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/ProjectHolder/UpDateProjectHolder/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\ProjectHolder\DeleteProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/ProjectHolder/DeleteProjectHolder/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\ProjectHolder\FindProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/ProjectHolder/FindProjectHolder/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\ProjectHolder\FindAllProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/ProjectHolder/FindAllProjectHolder/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Contributor\AddContributor\:
+    resource: '../../../User/Adapters/Controllers/Contributor/AddContributor/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Contributor\FindAllContributor\:
+    resource: '../../../User/Adapters/Controllers/Contributor/FindAllContributor/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Contributor\FindContributor\:
+    resource: '../../../User/Adapters/Controllers/Contributor/FindContributor/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Contributor\DeleteContributor\:
+    resource: '../../../User/Adapters/Controllers/Contributor/DeleteContributor/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Contributor\UpdateContributor\:
+    resource: '../../../User/Adapters/Controllers/Contributor/UpdateContributor/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Admin\AddAdmin\:
+    resource: '../../../User/Adapters/Controllers/Admin/AddAdmin/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Admin\UpdateAdmin\:
+    resource: '../../../User/Adapters/Controllers/Admin/UpdateAdmin/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Admin\DeleteAdmin\:
+    resource: '../../../User/Adapters/Controllers/Admin/DeleteAdmin/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Admin\FindAdmin\:
+    resource: '../../../User/Adapters/Controllers/Admin/FindAdmin/'
+    tags: ['controller.service_arguments']
+
+  App\Domain\User\Adapters\Controllers\Admin\FindAllAdmin\:
+    resource: '../../../User/Adapters/Controllers/Admin/FindAllAdmin/'
+    tags: ['controller.service_arguments']
+
+
+
+
+
+
+
+
+

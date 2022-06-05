@@ -1,0 +1,3 @@
+controllers:
+  resource: ../../../../Notification/Adapters/Controllers/
+  type: annotation

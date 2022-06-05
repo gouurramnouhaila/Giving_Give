@@ -1,0 +1,4 @@
+controllers:
+    resource: ../../../../Project/Adapters/Controllers/
+    type: annotation
+

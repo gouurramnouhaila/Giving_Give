@@ -1,0 +1,12 @@
+doctrine:
+  orm:
+    auto_generate_proxy_classes: true
+    naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+    auto_mapping: true
+    mappings:
+      notification_mapping:
+        is_bundle: false
+        type: annotation
+        dir: '%kernel.project_dir%/src/Domain/Notification/Adapters/Gateway/Doctrine'
+        prefix: 'App\Domain\Notification\Adapters\Gateway\Doctrine'
+        alias: App\Domain\User\Adapters\Gateway\Doctrine

@@ -1,0 +1,3 @@
+controllers:
+  resource: ../../../../User/Adapters/Controllers/
+  type: annotation
