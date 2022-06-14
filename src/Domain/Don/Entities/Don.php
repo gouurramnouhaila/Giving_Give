@@ -14,8 +14,12 @@ class Don
     /**
      * @var \DateTime
      */
-    private \DateTime $date;
+    private \DateTime $dateCreated;
 
+    private int $idContributor;
+
+    private int $idProject;
+    
     /**
      * Don constructor.
      * @param float $amount

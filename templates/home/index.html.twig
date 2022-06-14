@@ -1,16 +1,336 @@
-{% extends '_detailsNavbar.twig' %}
-
-{% block title %}Hello HomeController!{% endblock %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
-    <body class="home-image">
-    <div class="home-text">
-        <h4 class="mb-4">Raising Money Has Never Been So Easy</h4>
-        <h1 style="font-size:80px;font-family: Gill Sans, sans-serif;">CrowdFunding </h1>
-        <h1 style="font-size:80px;font-family: Gill Sans, sans-serif;">PlatForm </h1>
-        <a class="btn btn-info w-50 mt-4 pt-4" style="text-decoration: none;color: white;height: 60px;" href="{{ path('app_category_index') }}" >
-            Hire me
-        </a>
+
+  <div>
+    {% include "menus/header.html.twig" %}
+  </div>
+
+  <div class="bgded overlay padtop" style="background-image:url({{ asset("images/demo/backgrounds/01.png") }});">
+    {% include "menus/base_menu.html.twig" %}
+
+    <div id="pageintro" class="hoc clear">
+      <article>
+        <h3 class="heading">About Us</h3>
+        <p>Giving Give is an online fundraising platform for charities, nonprofit organizations, corporate foundations, and events.</p>
+        <footer>
+          <ul class="nospace inline pushright">
+            <li><a class="btn" href="#">Get a demo</a></li>
+            <li><a class="btn inverse" href="#">Tristique</a></li>
+          </ul>
+        </footer>
+      </article>
     </div>
-    </body>
+  </div>
+
+  <div class="wrapper row3">
+    <main class="hoc container clear">
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <section id="introblocks">
+        <ul class="nospace group grid-3">
+          <li class="one_third">
+            <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
+              <figcaption><a href="#">Aliquam faucibus</a></figcaption>
+            </figure>
+          </li>
+          <li class="one_third">
+            <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
+              <figcaption><a href="#">Aliquam faucibus</a></figcaption>
+            </figure>
+          </li>
+          <li class="one_third">
+            <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
+              <figcaption><a href="#">Aliquam faucibus</a></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+    <section class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <figure class="one_half first">
+        <h6 class="heading">Ante fringilla nisl eu</h6>
+        <p class="btmspace-30">Gravida lorem ligula quis ligula pellentesque congue semper felis maecenas rutrum euismod nibh class aptent taciti.</p>
+        <ul class="nospace clear points">
+          <li><a href="#"><i class="fas fa-equals"></i></a>
+            <h6 class="heading">Sociosqu ad litora torquent</h6>
+            <p>Per conubia nostra per inceptos himenaeos mauris lectus enim luctus vitae viverra a pharetra mollis diam aliquam.</p>
+          </li>
+          <li><a href="#"><i class="fas fa-exclamation-circle"></i></a>
+            <h6 class="heading">Sociosqu ad litora torquent</h6>
+            <p>Per conubia nostra per inceptos himenaeos mauris lectus enim luctus vitae viverra a pharetra mollis diam aliquam.</p>
+          </li>
+        </ul>
+      </figure>
+      <div class="one_half last"><a class="imgover" href="#"><img src="images/demo/480x300.png" alt=""></a></div>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <section id="services" class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p>
+        <h6 class="heading">Ut ipsum vivamus tincidunt</h6>
+      </div>
+      <ul class="nospace group grid-3">
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-chess-king"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-archive"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-backspace"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-bezier-curve"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-box-open"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fas fa-luggage-cart"></i></a>
+            <h6 class="heading">Tincidunt enim etiam</h6>
+            <p>Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare imperdiet sit amet enim suspendisse.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <section class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p>
+        <h6 class="heading">Ut ipsum vivamus tincidunt</h6>
+      </div>
+      <figure>
+        <figcaption class="center btmspace-50"><a href="#">Pharetra</a> / <a href="#">Imperdiet</a> / <a href="#">Suspendisse</a> / <a href="#">Potenti</a></figcaption>
+        <ul class="nospace group grid-3">
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+          <li class="one_third"><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a></li>
+        </ul>
+      </figure>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+    <section id="testimonials" class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <article>
+        <figure><img src="images/demo/100x100.png" alt=""></figure>
+        <h6 class="heading font-x2">J. Doe</h6>
+        <em>Conubia nostra per inceptos</em>
+        <blockquote>Himenaeos curabitur feugiat etiam in enim sed felis interdum lobortis phasellus nec eros ut arcu sollicitudin pellentesque curabitur porta justo vitae molestie semper ligula enim sed felis interdum lobortis phasellus nec eros ut arcu sollicitudin pellentesque curabitur porta justo vitae molestie semper ligula.</blockquote>
+      </article>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <section class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p>
+        <h6 class="heading">Ut ipsum vivamus tincidunt</h6>
+      </div>
+      <ul id="latest" class="nospace group sd-third">
+        <li class="one_third first">
+          <article>
+            <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+              <figcaption>
+                <h6 class="heading">Nisl nullam odio justo pharetra</h6>
+                <ul class="nospace meta clear">
+                  <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+                  <li>
+                    <time datetime="2045-04-06T08:15+00:00">06 Apr 2045</time>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <p>Et sagittis ac dignissim nec metus proin nunc maecenas vel nulla vivamus mattis massa vitae metus proin nunc maecenas vel nulla vivamus mattis massa vitae.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+              <figcaption>
+                <h6 class="heading">Nisl nullam odio justo pharetra</h6>
+                <ul class="nospace meta clear">
+                  <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+                  <li>
+                    <time datetime="2045-04-05T08:15+00:00">05 Apr 2045</time>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <p>Et sagittis ac dignissim nec metus proin nunc maecenas vel nulla vivamus mattis massa vitae metus proin nunc maecenas vel nulla vivamus mattis massa vitae.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+        <li class="one_third">
+          <article>
+            <figure><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+              <figcaption>
+                <h6 class="heading">Nisl nullam odio justo pharetra</h6>
+                <ul class="nospace meta clear">
+                  <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+                  <li>
+                    <time datetime="2045-04-04T08:15+00:00">04 Apr 2045</time>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+            <p>Et sagittis ac dignissim nec metus proin nunc maecenas vel nulla vivamus mattis massa vitae metus proin nunc maecenas vel nulla vivamus mattis massa vitae.</p>
+            <footer><a href="#">Read More</a></footer>
+          </article>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- Bottom Background Image Wrapper -->
+  <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+    <!-- ################################################################################################ -->
+    <div class="wrapper row4">
+      <footer id="footer" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="group btmspace-50">
+          <div class="one_quarter first">
+            <h6 class="heading">Lorem proin volutpat</h6>
+            <p>Ligula quis sapien nam molestie massa quis pede maecenas quis lacus nunc sed lectus quis lectus tristique tincidunt sed varius nisl tincidunt lectus pellentesque sagittis mauris ut leo ullamcorper tortor morbi accumsan [<a href="#">&hellip;</a>]</p>
+            <ul class="faico clear">
+              <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+              <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+            </ul>
+          </div>
+          <div class="one_quarter">
+            <h6 class="heading">Nascetur ridiculus mus</h6>
+            <ul class="nospace linklist">
+              <li><a href="#">Aliquam eget leo praesent</a></li>
+              <li><a href="#">Vel urna nunc ultricies</a></li>
+              <li><a href="#">Faucibus nunc cum sociis</a></li>
+              <li><a href="#">Natoque penatibus et magnis</a></li>
+              <li><a href="#">Dis parturient montes</a></li>
+            </ul>
+          </div>
+          <div class="one_quarter">
+            <h6 class="heading">Vestibulum sed quam</h6>
+            <p class="nospace btmspace-15">Ante dapibus luctus sed quis diam vitae ipsum ultrices vehicula.</p>
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Newsletter:</legend>
+                <input class="btmspace-15" type="text" value="" placeholder="Name">
+                <input class="btmspace-15" type="text" value="" placeholder="Email">
+                <button class="btn" type="submit" value="submit">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="one_quarter">
+            <h6 class="heading">Aenean diam euismod</h6>
+            <ul class="nospace clear latestimg">
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+              <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- ################################################################################################ -->
+        <hr class="btmspace-50">
+        <!-- ################################################################################################ -->
+        <nav>
+          <ul class="nospace">
+            <li><a href="index.html"><i class="fas fa-lg fa-home"></i></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </nav>
+        <!-- ################################################################################################ -->
+      </footer>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- End Bottom Background Image Wrapper -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
 {% endblock %}
+
+

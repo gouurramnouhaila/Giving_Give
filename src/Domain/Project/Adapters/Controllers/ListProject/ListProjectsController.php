@@ -14,7 +14,7 @@ class ListProjectsController
 {
 
     /**
-     * @Route(path="/projects",name="app_projects_all")
+     * @Route(path="/api/projects",name="app_projects_all")
      */
     public function __invoke(ListProjects $useCase,SerializerInterface $serializer)
     {

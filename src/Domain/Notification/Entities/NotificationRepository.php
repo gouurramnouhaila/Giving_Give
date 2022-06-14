@@ -17,5 +17,5 @@ interface NotificationRepository
      * @param Notification $notification
      * @return mixed
      */
-    public function sendNotification(Notification $notification);
+    public function sendNotification(\App\Domain\Notification\Adapters\Gateway\Doctrine\Notification $notification);
 }

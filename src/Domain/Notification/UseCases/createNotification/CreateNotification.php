@@ -4,7 +4,7 @@
 namespace App\Domain\Notification\UseCases\createNotification;
 
 
-use App\Domain\Notification\Adapters\Doctrine\DoctrineNotificationRepository;
+use App\Domain\Notification\Adapters\Gateway\Doctrine\DoctrineNotificationRepository;
 use App\Domain\Notification\Entities\Notification;
 
 class CreateNotification
@@ -24,7 +24,7 @@ class CreateNotification
 
     public function execute(CreateNotificationRequest $request,CreateNotificationPresenterInterface $presenter) {
 
-        $notification = new Notification($request->id, $request->content,$request->notifyDate, $request->readingDate, $request->subject, $request->idContributor);
+        $notification = new Notification($request->id, $request->content,$request->notifyDate, $request->readingDate,$request->isRead, $request->subject, $request->idContributor);
 
         $this->notificationRepository->createNotification($notification);
 

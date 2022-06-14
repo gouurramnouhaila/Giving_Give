@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Domain\Notification\:
+    resource: '../../../Notification/*'
+    exclude: '../../../Notification/{Frameworks,Tests}'
+
+
+  App\Domain\Notification\Adapters\Controllers\SendNotification\:
+    resource: '../../../Notification/Adapters/Controllers/SendNotification'
+    tags: ['controller.service_arguments']
+
+  App\Domain\Notification\Adapters\Controllers\CreateNotification\:
+    resource: '../../../Notification/Adapters/Controllers/CreateNotification'
+    tags: ['controller.service_arguments']
