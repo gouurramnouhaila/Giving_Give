@@ -4,9 +4,11 @@
 namespace App\Domain\Project\Adapters\Controllers\ListProject;
 
 
+
 use App\Domain\Project\UseCase\ListProjects\ListProjectsPresenterInterface;
 use App\Domain\Project\UseCase\ListProjects\ListProjectsResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 
 class ListProjectJsonPresenter implements ListProjectsPresenterInterface
@@ -24,7 +26,10 @@ class ListProjectJsonPresenter implements ListProjectsPresenterInterface
     public function getResponse(SerializerInterface $serializer): JsonResponse {
 
         return new JsonResponse([
-                'projects' => $serializer->serialize($this->projects, 'json')
-            ]);
+                'projects' => $serializer->serialize(
+                   $this->projects, JsonEncoder::FORMAT),
+                   200,
+                   array_merge([], ['Content-Type' => 'application/json;charset=UTF-8'])
+    ]);
     }
 }

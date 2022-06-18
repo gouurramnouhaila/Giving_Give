@@ -2,72 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0479a2d3-3d46-4a86-bf46-a5690ec91ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/demo/100x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/348x220.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/348x261.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/480x300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/backgrounds/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/backgrounds/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/gallery/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/gallery/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/imgl.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/imgr.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/demo/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/scripts/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/scripts/jquery.backtotop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/scripts/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/scripts/jquery.mobilemenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/css/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/fontawesome-free/webfonts/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/framework.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layout/styles/layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/menus/base_menu.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/menus/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Don/Entities/Don.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Don/Entities/Don.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/CreateNotification/CreateNotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/CreateNotification/CreateNotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/CreateNotification/CreateNotificationJsonPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/CreateNotification/CreateNotificationJsonPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationJsonPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Controllers/SendNotification/SendNotificationJsonPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway/Doctrine/DoctrineNotificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway/Doctrine/DoctrineNotificationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Entities/NotificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Entities/NotificationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/packages/mailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/packages/mailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationPresenterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationPresenterInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/SendNotification/SendNotificationResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Notification/UseCases/createNotification/CreateNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Notification/UseCases/createNotification/CreateNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectJsonPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectJsonPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +175,7 @@
       <path value="$PROJECT_DIR$/vendor/lorenzo/pinky" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="25LVrNEU5k2YlyRd4aaLCcdkibu" />
@@ -254,6 +199,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
@@ -422,7 +368,9 @@
       <workItem from="1654762429589" duration="5892000" />
       <workItem from="1654950443301" duration="985000" />
       <workItem from="1654984605250" duration="1451000" />
-      <workItem from="1655213833900" duration="1705000" />
+      <workItem from="1655213833900" duration="3953000" />
+      <workItem from="1655417103004" duration="8000" />
+      <workItem from="1655547780925" duration="835000" />
     </task>
     <servers />
   </component>
@@ -430,6 +378,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655220156842">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1655220156842" />
     <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1654768865959">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -459,16 +411,16 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="512" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1654255889000" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1655213841889">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1655547784119">
+      <screen x="0" y="23" width="1280" height="717" />
     </state>
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1655213841889" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.709@0.23.1280.709" timestamp="1654985862450" />
     <state x="296" y="233" key="com.intellij.ide.util.TipDialog/0.23.1280.712@0.23.1280.712" timestamp="1652607884392" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.714@0.23.1280.714" timestamp="1652876592265" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.714@0.23.1280.714" timestamp="1655417105680" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.0.1280.739" timestamp="1654500538039" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1654344382113" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.717@0.23.1280.717" timestamp="1648381116570" />
+    <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.717@0.23.1280.717" timestamp="1655547784119" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.722@0.23.1280.722" timestamp="1649980798761" />
     <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.725@0.23.1280.725" timestamp="1649942999111" />
     <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.726@0.23.1280.726" timestamp="1652394554494" />
@@ -480,9 +432,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="402" y="8" key="refactoring.ChangeSignatureDialog/0.0.1280.800@0.0.1280.800" timestamp="1650662965643" />
-    <state x="305" y="185" key="run.anything.popup" timestamp="1655213942487">
+    <state x="305" y="185" key="run.anything.popup" timestamp="1655548686361">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1655213942487" />
+    <state x="305" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1655548686361" />
   </component>
 </project>
