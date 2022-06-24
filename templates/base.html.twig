@@ -1,36 +1,23 @@
-{% block head %}
-    <link href="{{ asset('layout/styles/layout.css') }}" rel="stylesheet" />
-{% endblock %}
-{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-    <div class="container">
-        <div class="row text-center mb-5 mt-5">
-            <h2>List of admin accounts</h2>
-        </div>
-        <div>
-            <div>
-                <a href="{{ path('app_category_new') }}" class="btn btn-secondary mb-3 mt-3">Create New</a>
-            </div>
-        </div>
-        <div class="row">
-            {% for category in categories %}
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            <p class="card-text">{{ category.titre }}</p>
-                            <p class="card-text">{{ category.description }}</p>
-                            <small class="text-muted">{{ category.name }}</small>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
-                                    <a href="{{ path('app_categorie_supp', {'id' : category.id}) }}" onclick="confirm('Are you sure ?')" class="btn btn-sm btn-outline-secondary">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL&family=Josefin+Sans&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
 {% endblock %}
+</body>
+</html>

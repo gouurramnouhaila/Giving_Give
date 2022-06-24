@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0479a2d3-3d46-4a86-bf46-a5690ec91ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrowndFunding_Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/controllers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/controllers/hello_controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectJsonPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Project/Adapters/Controllers/ListProject/ListProjectJsonPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backNavBar.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/menus/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menus/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +37,20 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -176,6 +194,7 @@
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-pack" />
     </include_path>
   </component>
   <component name="ProjectId" id="25LVrNEU5k2YlyRd4aaLCcdkibu" />
@@ -191,7 +210,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/styles" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -202,21 +221,22 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/src/Domain/Notification/Frameworks" />
-      <recent name="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor" />
-      <recent name="$PROJECT_DIR$/src/Domain/Project/Frameworks" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/styles" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/Domain/Notification/Frameworks/config" />
       <recent name="$PROJECT_DIR$/src/Domain/Notification/Adapters/Gateway" />
       <recent name="$PROJECT_DIR$/src/Domain/User/UseCases/Contributor/AddContributor" />
-      <recent name="$PROJECT_DIR$/src/Domain/User/Adapters/Controllers/ProjectHolder" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/styles" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/src/Domain/Notification/Frameworks" />
     </key>
   </component>
   <component name="RunManager">
@@ -370,7 +390,9 @@
       <workItem from="1654984605250" duration="1451000" />
       <workItem from="1655213833900" duration="3953000" />
       <workItem from="1655417103004" duration="8000" />
-      <workItem from="1655547780925" duration="835000" />
+      <workItem from="1655547780925" duration="11360000" />
+      <workItem from="1655631299801" duration="174000" />
+      <workItem from="1656077119893" duration="2768000" />
     </task>
     <servers />
   </component>
@@ -391,6 +413,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1654458763910" />
+    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1656079064489">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1656079064489" />
     <state x="378" y="163" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1654502127539">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -399,6 +425,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="333" y="253" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1652394707000" />
+    <state x="398" y="321" key="ComposerInitDialogKey" timestamp="1656079961027">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="398" y="321" key="ComposerInitDialogKey/0.0.1280.800@0.0.1280.800" timestamp="1656079961027" />
     <state x="296" y="158" key="NewPhpClassDialog" timestamp="1655215450351">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -407,16 +437,16 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="461" y="334" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1649179619260" />
-    <state width="512" height="445" key="SwitcherDM" timestamp="1654255889000">
+    <state width="512" height="445" key="SwitcherDM" timestamp="1655559685251">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="512" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1654255889000" />
-    <state x="296" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1655547784119">
-      <screen x="0" y="23" width="1280" height="717" />
+    <state width="512" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1655559685251" />
+    <state x="296" y="233" key="com.intellij.ide.util.TipDialog" timestamp="1655631312350">
+      <screen x="0" y="23" width="1280" height="712" />
     </state>
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1655213841889" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.709@0.23.1280.709" timestamp="1654985862450" />
-    <state x="296" y="233" key="com.intellij.ide.util.TipDialog/0.23.1280.712@0.23.1280.712" timestamp="1652607884392" />
+    <state x="296" y="233" key="com.intellij.ide.util.TipDialog/0.23.1280.712@0.23.1280.712" timestamp="1655631312350" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.714@0.23.1280.714" timestamp="1655417105680" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.0.1280.739" timestamp="1654500538039" />
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1654344382113" />
@@ -424,6 +454,10 @@
     <state x="296" y="234" key="com.intellij.ide.util.TipDialog/0.23.1280.722@0.23.1280.722" timestamp="1649980798761" />
     <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.725@0.23.1280.725" timestamp="1649942999111" />
     <state x="350" y="417" key="com.intellij.ide.util.TipDialog/0.23.1280.726@0.23.1280.726" timestamp="1652394554494" />
+    <state x="429" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1655559726316">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="429" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1655559726316" />
     <state x="0" y="0" width="824" height="800" key="find.popup" timestamp="1654431523996">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
