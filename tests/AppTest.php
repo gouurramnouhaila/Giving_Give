@@ -4,7 +4,12 @@
 namespace App\Tests;
 
 
-class AppTest
-{
 
+use PHPUnit\Framework\TestCase;
+
+class AppTest extends TestCase
+{
+    public function testSome() {
+        $this->assertEquals(3, 1+1);
+    }
 }

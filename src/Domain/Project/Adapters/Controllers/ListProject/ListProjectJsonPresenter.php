@@ -25,11 +25,7 @@ class ListProjectJsonPresenter implements ListProjectsPresenterInterface
 
     public function getResponse(SerializerInterface $serializer): JsonResponse {
 
-        return new JsonResponse([
-                'projects' => $serializer->serialize(
-                   $this->projects, JsonEncoder::FORMAT),
-                   200,
-                   array_merge([], ['Content-Type' => 'application/json;charset=UTF-8'])
-    ]);
+        return new JsonResponse($serializer->serialize(
+            $this->projects, JsonEncoder::FORMAT), 200, [], true);
     }
 }

@@ -4,6 +4,7 @@
 namespace App\Domain\Project\Adapters\Gateway\Doctrine;
 
 use App\Domain\User\Adapters\Gateway\Doctrine\ProjectHolder;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,11 +23,13 @@ class Project
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
      */
     private $title;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
      */
     private  $description;
 
@@ -43,12 +46,22 @@ class Project
     /**
      * @ORM\ManyToOne(targetEntity="App\Domain\Project\Adapters\Gateway\Doctrine\Category", inversedBy="projects")
      */
-    private $category;
+    private ?Category $category = null;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Domain\User\Adapters\Gateway\Doctrine\ProjectHolder", inversedBy="projects")
      */
-    private $projectHolder;
+    private ?ProjectHolder $projectHolder = null;
+
+    /**
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
+     * )
+     */
+    private int $code;
 
     /**
      * @return mixed
@@ -73,6 +86,7 @@ class Project
 
     /**
      * @ORM\Column(type="string")
+     *
      */
     private $status;
 
@@ -84,7 +98,7 @@ class Project
      * @param $video
      * @param $objectiveFund
      */
-    public function __construct($title, $description, $photo, $video, $objectiveFund,Category $category,ProjectHolder $projectHolder)
+    public function __construct($title, $description, $photo, $video, $objectiveFund,?Category $category,?ProjectHolder $projectHolder)
     {
         $this->title = $title;
         $this->description = $description;

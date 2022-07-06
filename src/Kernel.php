@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+use Nelmio\CorsBundle\NelmioCorsBundle;
 
 class Kernel extends BaseKernel
 {
@@ -22,6 +23,7 @@ class Kernel extends BaseKernel
         } elseif (is_file($path = \dirname(__DIR__).'/config/services.php')) {
             (require $path)($container->withPath($path), $this);
         }
+
 
         // Dynamic services configuration
         $container->import('../src/Domain/*/Frameworks/config/services.yaml');
@@ -44,4 +46,6 @@ class Kernel extends BaseKernel
         $routes->import('../src/Domain/*/Frameworks/config/routes.yaml');
         $routes->import('../src/Domain/*/Frameworks/config/{routes}/*.yaml');
     }
+
+
 }
