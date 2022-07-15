@@ -3,9 +3,6 @@
 
 namespace App\Domain\Project\Entities;
 
-use phpDocumentor\Reflection\Types\Boolean;
-use App\Domain\Project\Adapters\Gateway\Doctrine\Project as ProjectDoctrine;
-
 interface ProjectRepository
 {
     /**
@@ -14,40 +11,45 @@ interface ProjectRepository
     public function findAll();
 
     /**
-     * @param Project $project
-     * @return mixed
+     * @param int $id
+     * @return Project
      */
-    public function add(Project $project);
+    public function find(int $id): Project;
+
+    /**
+     * @param Project $project
+     * @return void
+     */
+    public function add(Project $project): void;
 
     /**
      * @param int $id
-     * @return mixed
+     * @return bool
      */
-    public function delete(int $id);
+    public function delete(int $id): bool;
 
     /**
      * @param Project $project
-     * @return ProjectDoctrine
+     * @return Project
      */
-    public function update(Project $project): ProjectDoctrine;
+    public function update(Project $project): Project;
 
     /**
-     * @param Project $project
-     * @return mixed
+     * @param int $id
+     * @return void
      */
-    public function accept(Project $project);
+    public function accept(int $id);
 
     /**
-     * @param Project $project
-     * @return mixed
+     * @param int $id
+     * @return void
      */
-    public function reject(Project $project);
+    public function reject(int $id): void;
 
     /**
      * @param string $keyword
      * @return mixed
      */
     public function search(string $keyword);
-
 
 }

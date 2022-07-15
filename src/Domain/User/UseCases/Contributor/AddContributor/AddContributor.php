@@ -21,8 +21,12 @@ class AddContributor
         $this->contributorRepository = $contributorRepository;
     }
 
-
-    public function execute(AddContributorRequest $request, AddContributorPresenterInterface $presenter) {
+    /**
+     * @param AddContributorRequest $request
+     * @param AddContributorPresenterInterface $presenter
+     * @return void
+     */
+    public function execute(AddContributorRequest $request, AddContributorPresenterInterface $presenter): void {
 
         $contributor = new Contributor($request->getId(), $request->getFirstName(), $request->getLastName(), $request->getEmail(), $request->getPassword(), $request->getState(), $request->getBirthday());
 

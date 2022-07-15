@@ -3,12 +3,9 @@
 
 namespace App\Domain\Project\UseCase\UpDateProject;
 
-
-use App\Domain\Project\Adapters\Gateway\Doctrine\DoctrineCategoryRepository;
 use App\Domain\Project\Adapters\Gateway\Doctrine\DoctrineProjectRepository;
 use App\Domain\Project\Entities\Exceptions\ProjectNotFoundException;
-use App\Domain\Project\Entities\Project as projectEntity;
-use App\Domain\Project\Entities\ProjectRepository;
+use App\Domain\Project\Entities\Project;
 
 class UpDateProject
 {
@@ -18,50 +15,26 @@ class UpDateProject
     private DoctrineProjectRepository $projectRepository;
 
     /**
-     * @var DoctrineCategoryRepository
-     */
-    private DoctrineCategoryRepository $categoryRepository;
-
-    /**
-     * UpDateProjectHolder constructor.
      * @param DoctrineProjectRepository $repository
      */
-    public function __construct(DoctrineProjectRepository $repository,DoctrineCategoryRepository $categoryRepository)
+    public function __construct(DoctrineProjectRepository $repository)
     {
         $this->projectRepository = $repository;
-        $this->categoryRepository = $categoryRepository;
-    }
 
+    }
 
     /**
      * @param UpDateProjectRequest $request
      * @param UpDateProjectPresenterInterface $presenter
+     * @return void
+     * @throws ProjectNotFoundException
      */
-    public function execute(UpDateProjectRequest $request,UpDateProjectPresenterInterface $presenter) {
+    public function execute(UpDateProjectRequest $request,UpDateProjectPresenterInterface $presenter): void {
 
-        $project = $this->projectRepository->find($request->id);
-        //$category = $this->categoryRepository->find($request->idCategory);
+        $project = new Project($request->id, $request->title, $request->description, $request->photo,$request->video, $request->objectiveFund, $request->objectiveFund, $request->idCategory);
 
-        if(!$project) {
-            throw new ProjectNotFoundException();
-        }
+        $this->projectRepository->update($project);
 
-        $projectEntity = new projectEntity($project->getId(), $request->title,$request->description,$request->photo,$request->video,$request->objectiveFund, null,$request->idCategory);
-
-
-        /* update project Doctrine
-        $project->setTitle($request->title);
-        $project->setDescription($request->description);
-        $project->setPhoto($request->photo);
-        $project->setVideo($request->video);
-        $project->setObjectiveFund($request->objectiveFund);
-        $project->setCategory($category);*/
-
-        $projectModify = $this->projectRepository->update($projectEntity);
-
-        $presenter->present($projectEntity);
-
-
-
+        $presenter->present($project);
     }
 }

@@ -91,12 +91,13 @@ class Project
     private $status;
 
     /**
-     * Project constructor.
      * @param $title
      * @param $description
      * @param $photo
      * @param $video
      * @param $objectiveFund
+     * @param Category|null $category
+     * @param ProjectHolder|null $projectHolder
      */
     public function __construct($title, $description, $photo, $video, $objectiveFund,?Category $category,?ProjectHolder $projectHolder)
     {
@@ -198,9 +199,9 @@ class Project
     }
 
     /**
-     * @return mixed
+     * @return Category|null
      */
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->category;
     }

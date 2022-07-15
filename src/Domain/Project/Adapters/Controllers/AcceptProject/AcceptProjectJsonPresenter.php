@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class AcceptProjectJsonPresenter implements AcceptProjectPresenterInterface
 {
 
-    private $message;
+    private ?bool $message = null;
 
     /**
      * @inheritDoc
      */
-    public function present(AcceptProjectResponse $acceptProjectResponse)
+    public function present(AcceptProjectResponse $acceptProjectResponse): void
     {
         $this->message = $acceptProjectResponse->status;
     }

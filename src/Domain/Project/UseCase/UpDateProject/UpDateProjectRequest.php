@@ -4,39 +4,41 @@
 namespace App\Domain\Project\UseCase\UpDateProject;
 
 
+use DateTimeImmutable;
+
 class UpDateProjectRequest
 {
 
-    public $id;
+    public ?int $id = null;
 
-    public $title;
+    public ?string $title = null;
 
-    public $description;
+    public ?string $description = null;
 
-    public $photo;
+    public ?string $photo = null;
 
-    public $video;
+    public ?string $video = null;
 
-    public $objectiveFund;
+    public ?float $objectiveFund = null;
 
-    public $projectHolderId;
+    public ?int $projectHolderId = null;
 
-    public \DateTimeImmutable $dateCreated;
+    public DateTimeImmutable $dateCreated;
 
-    public $idCategory;
+    public ?int $idCategory = null;
 
     /**
-     * UpDateProjectRequest constructor.
-     * @param int $id
-     * @param string $title
-     * @param string $description
-     * @param string $photo
+     * @param int|null $id
+     * @param string|null $title
+     * @param string|null $description
+     * @param string|null $photo
      * @param string|null $video
-     * @param float $objectiveFund
-     * @param int $projectHolderId
-     * @param \DateTime $dateCreated
+     * @param float|null $objectiveFund
+     * @param int|null $projectHolderId
+     * @param DateTimeImmutable|null $dateCreated
+     * @param int|null $idCategory
      */
-    public function __construct($id,$title, $description, $photo, $video, $objectiveFund, $projectHolderId,$idCategory)
+    public function __construct(?int $id, ?string $title, ?string $description, ?string $photo, ?string $video, ?float $objectiveFund, ?int $projectHolderId, ?DateTimeImmutable $dateCreated, ?int $idCategory)
     {
         $this->id = $id;
         $this->title = $title;
@@ -45,8 +47,7 @@ class UpDateProjectRequest
         $this->video = $video;
         $this->objectiveFund = $objectiveFund;
         $this->projectHolderId = $projectHolderId;
-        $this->dateCreated = new \DateTimeImmutable();
+        $this->dateCreated = new DateTimeImmutable();
         $this->idCategory = $idCategory;
     }
-
 }

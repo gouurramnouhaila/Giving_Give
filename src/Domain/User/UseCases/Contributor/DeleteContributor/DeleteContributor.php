@@ -8,10 +8,12 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class DeleteContributor
 {
+    /**
+     * @var ContributorRepository
+     */
     private ContributorRepository $contributorRepository;
 
     /**
-     * AddContributor constructor.
      * @param ContributorRepository $contributorRepository
      */
     public function __construct(ContributorRepository $contributorRepository)
@@ -19,9 +21,14 @@ class DeleteContributor
         $this->contributorRepository = $contributorRepository;
     }
 
-    public function execute(DeleteContributorRequest $request, DeleteContributorPresenterInterface $presenter) {
-        $res = $this->contributorRepository->remove($request->contributorId);
+    /**
+     * @param DeleteContributorRequest $request
+     * @param DeleteContributorPresenterInterface $presenter
+     * @return void
+     */
+    public function execute(DeleteContributorRequest $request, DeleteContributorPresenterInterface $presenter): void {
+        $status = $this->contributorRepository->remove($request->getId());
 
-        $presenter->present(new DeleteContributorResponse($res));
+        $presenter->present(new DeleteContributorResponse($status));
     }
 }

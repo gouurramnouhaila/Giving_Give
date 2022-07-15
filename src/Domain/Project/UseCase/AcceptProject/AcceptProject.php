@@ -5,9 +5,7 @@ namespace App\Domain\Project\UseCase\AcceptProject;
 
 
 use App\Domain\Project\Adapters\Gateway\Doctrine\DoctrineProjectRepository;
-use App\Domain\Project\Entities\Exceptions\ProjectNotFoundException;
-use App\Domain\Project\Entities\Project;
-use App\Domain\Project\Entities\ProjectRepository;
+
 
 class AcceptProject
 {
@@ -24,19 +22,13 @@ class AcceptProject
     /**
      * @param AcceptProjectRequest $request
      * @param AcceptProjectPresenterInterface $presenter
+     * @return void
      */
-    public function execute(AcceptProjectRequest $request,AcceptProjectPresenterInterface $presenter) {
-        $p = $this->projectRepository->find($request->getId());
+    public function execute(AcceptProjectRequest $request,AcceptProjectPresenterInterface $presenter): void {
 
-        if ($p == null) {
-            throw new ProjectNotFoundException();
-        }
+        $this->projectRepository->accept($request->getId());
 
-        $project = new Project($p->getId(),$p->getTitle(),$p->getDescription(),$p->getPhoto(),$p->getVideo(),$p->getObjectiveFund(),null,$p->getCategory()->getId());
-
-        $this->projectRepository->accept($project);
-
-        $presenter->present(new AcceptProjectResponse('Project with ID'.$project->getId().' is accepted', 200));
+        $presenter->present(new AcceptProjectResponse('Project with ID'.$request->getId().' is accepted'));
 
     }
 }

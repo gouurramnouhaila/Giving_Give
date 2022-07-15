@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Domain\Category\UseCases\AddCategory;
+namespace App\Domain\Project\UseCase\Category\AddCategory;
 
 
 interface AddCategoryPresenterInterface

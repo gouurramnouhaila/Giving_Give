@@ -10,61 +10,38 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class FindProjectJsonPresenter implements FindProjectPresenterInterface
 {
-    public int $id;
-    /**
-     * @var string
-     */
-    private string $title = '';
+    public  ?int $id = null;
 
-    /**
-     * @var string
-     */
-    public string $description;
+    private ?string $title = null;
 
-    /**
-     * @var string
-     */
-    public string $photo;
+    public ?string $description = null;
 
-    /**
-     * @var string|null
-     */
-    public ?string $video;
+    public ?string $photo = null;
 
-    /**
-     * @var float
-     */
-    public float $objectiveFund = 0.00;
+    public ?string $video = null;
 
-    /**
-     * @var int
-     */
+    public ?float $objectiveFund = null;
+
     public ?int $projectHolderId = null;
 
-    /**
-     * @var int
-     */
-    public ?int $categoryId = null;
+    public ?\DateTimeImmutable $dateCreated = null;
 
-    /**
-     * @var \DateTimeInterface
-     */
-    public \DateTimeInterface $dateCreated;
+    public ?int $idCategory = null;
 
     /**
      * @inheritDoc
      */
-    public function present(Project $projectResponse): void
+    public function present(Project $project): void
     {
-        $this->id = $projectResponse->getId();
-        $this->title = $projectResponse->getTitle();
-        $this->description = $projectResponse->getDescription();
-        $this->video = $projectResponse->getVideo();
-        $this->dateCreated = $projectResponse->getDateCreated();
-        $this->photo = $projectResponse->getPhoto();
-        $this->objectiveFund = $projectResponse->getObjectiveFund();
-        $this->projectHolderId = $projectResponse->getProjectHolderId();
-        $this->categoryId = $projectResponse->getIdCatgeory();
+        $this->id = $project->getId();
+        $this->title = $project->getTitle();
+        $this->description = $project->getDescription();
+        $this->video = $project->getVideo();
+        $this->dateCreated = $project->getDateCreated();
+        $this->photo = $project->getPhoto();
+        $this->objectiveFund = $project->getObjectiveFund();
+        $this->idCategory = $project->getIdCategory();
+
     }
 
     public function getResponse(): JsonResponse
@@ -79,7 +56,7 @@ class FindProjectJsonPresenter implements FindProjectPresenterInterface
                 'objectiveFund' => $this->objectiveFund,
                 'projectHolderId' => $this->projectHolderId,
                 'dateCreated' => $this->dateCreated,
-                'categoryId' => $this->categoryId
+                'idCategory' => $this->idCategory
             ]
         );
     }

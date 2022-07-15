@@ -7,23 +7,22 @@ namespace App\Domain\Project\UseCase\AcceptProject;
 class AcceptProjectRequest
 {
     /**
-     * @var int
+     * @var int|null
      */
-    private int $id;
+    private ?int $id = null;
 
     /**
-     * FindProjectRequest constructor.
-     * @param int $id
+     * @param int|null $id
      */
-    public function __construct(int $id)
+    public function __construct(?int $id)
     {
         $this->id = $id;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }

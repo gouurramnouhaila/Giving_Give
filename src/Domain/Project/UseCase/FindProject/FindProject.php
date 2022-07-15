@@ -3,9 +3,8 @@
 
 namespace App\Domain\Project\UseCase\FindProject;
 
-
 use App\Domain\Project\Adapters\Gateway\Doctrine\DoctrineProjectRepository;
-use App\Domain\Project\Entities\Project;
+
 
 class FindProject
 {
@@ -16,12 +15,14 @@ class FindProject
         $this->projectRepository = $projectRepository;
     }
 
-    public function execute(FindProjectRequest $request,FindProjectPresenterInterface $presenter) {
+    /**
+     * @param FindProjectRequest $request
+     * @param FindProjectPresenterInterface $presenter
+     * @return void
+     */
+    public function execute(FindProjectRequest $request,FindProjectPresenterInterface $presenter): void {
 
-        $p = $this->projectRepository->find($request->getId());
-
-        $project = new Project($p->getTitle(),$p->getDescription(),$p->getPhoto(),$p->getVideo(),$p->getObjectiveFund(),null,$p->getCategory()->getId());
-        $project->setId($p->getId());
+        $project = $this->projectRepository->find($request->getId());
 
         $presenter->present($project);
     }

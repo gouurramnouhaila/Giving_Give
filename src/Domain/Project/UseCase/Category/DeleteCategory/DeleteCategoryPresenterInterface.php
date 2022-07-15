@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Domain\Category\UseCases\DeleteCategory;
+namespace App\Domain\Project\UseCase\Category\DeleteCategory;
 
 
 interface DeleteCategoryPresenterInterface

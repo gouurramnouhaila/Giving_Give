@@ -6,85 +6,57 @@ namespace App\Domain\Project\Adapters\Controllers\AddProject;
 
 use App\Domain\Project\Entities\Project;
 use App\Domain\Project\UseCase\AddProject\AddProjectPresenterInterface;
-use App\Domain\Project\UseCase\AddProject\AddProjectResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class AddProjectJsonPresenter implements AddProjectPresenterInterface
 {
-    /**
-     * @var int|null
-     */
-    private ?int $id = null;
+    public  ?int $id = null;
 
-    /**
-     * @var string
-     */
-    private string $title = '';
+    private ?string $title = null;
 
-    /**
-     * @var string
-     */
-    private string $description = '';
+    public ?string $description = null;
 
-    /**
-     * @var string
-     */
-    private string $photo = '';
+    public ?string $photo = null;
 
-    /**
-     * @var string|null
-     */
-    private ?string $video = '';
+    public ?string $video = null;
 
-    /**
-     * @var float
-     */
-    private ?float $objectiveFund = null;
+    public ?float $objectiveFund = null;
 
-    /**
-     * @var int
-     */
-    private ?int $projectHolderId = 0;
+    public ?int $projectHolderId = null;
 
-    /**
-     * @var \DateTime
-     */
-    private ?\DateTimeInterface $dateCreated = null;
+    public ?\DateTimeImmutable $dateCreated = null;
 
-    private ?int $idCatgeory = null;
-
-    private ?string $status = null;
-
+    public ?int $idCategory = null;
 
     /**
      * @inheritDoc
      */
-    public function present(Project $projectResponse): void
+    public function present(Project $project): void
     {
-        $this->id = $projectResponse->getId();
-        $this->title = $projectResponse->getTitle();
-        $this->description = $projectResponse->getDescription();
-        $this->photo = $projectResponse->getPhoto();
-        $this->video = $projectResponse->getVideo();
-        $this->objectiveFund = $projectResponse->getObjectiveFund();
-        $this->projectHolderId = $projectResponse->getProjectHolderId();
-        $this->dateCreated = $projectResponse->getDateCreated();
-        $this->idCatgeory = $projectResponse->getIdCatgeory();
-        $this->status = $projectResponse->getStatus();
+        $this->description = $project->getDescription();
+        $this->title = $project->getTitle();
+        $this->video = $project->getVideo();
+        $this->dateCreated = $project->getDateCreated();
+        $this->photo = $project->getPhoto();
+        $this->objectiveFund = $project->getObjectiveFund();
+        $this->idCategory = $project->getIdCategory();
+
     }
 
-    public function getResponse() {
-        return new JsonResponse([
-            'id' => $this->id,
-            'title' => $this->title,
-            'description' => $this->description,
-            'photo' => $this->photo,
-            'video' => $this->video,
-            'objectiveFund' => $this->objectiveFund,
-            'projectHolderId' => $this->projectHolderId,
-            'dateCreated' => $this->dateCreated,
-            'idCatgeory' => $this->idCatgeory,
-            'status' => $this->status
-        ]);
+    public function getResponse(): JsonResponse
+    {
+        return new JsonResponse (
+            [
+                'id' => $this->id,
+                'title' => $this->title,
+                'description' => $this->description,
+                'photo' => $this->photo,
+                'video' => $this->video,
+                'objectiveFund' => $this->objectiveFund,
+                'projectHolderId' => $this->projectHolderId,
+                'dateCreated' => $this->dateCreated,
+                'idCategory' => $this->idCategory
+            ]
+        );
     }
 }

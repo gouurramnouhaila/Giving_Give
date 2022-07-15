@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Domain\Category\UseCases\UpDateCategory;
+namespace App\Domain\Project\UseCase\Category\UpDateCategory;
 
 
 class UpDateCategory

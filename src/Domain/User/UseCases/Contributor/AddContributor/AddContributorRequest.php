@@ -4,56 +4,55 @@
 namespace App\Domain\User\UseCases\Contributor\AddContributor;
 
 
+use DateTimeImmutable;
+
 class AddContributorRequest
 {
+    /**
+     * @var int|null
+     */
+    private ?int $id = null;
 
     /**
-     * @var int
+     * @var string|null
      */
-    private int $id;
+    private ?string $firstName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $firstName;
+    private ?string $lastName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $lastName;
+    private ?string $email = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $email;
+    private ?string $password = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $password;
+    private ?string $state = null;
 
     /**
-     * @var string
+     * @var DateTimeImmutable|null
      */
-    private string $state;
-
-
-    /**
-     * @var DateTime
-     */
-    private \DateTime $birthday;
+    private ?DateTimeImmutable $birthday = null;
 
     /**
-     * AddContributorRequest constructor.
-     * @param int $id
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $email
-     * @param string $password
-     * @param string $state
-     * @param $birthday
+     * @param int|null $id
+     * @param string|null $firstName
+     * @param string|null $lastName
+     * @param string|null $email
+     * @param string|null $password
+     * @param string|null $state
+     * @param DateTimeImmutable|null $birthday
      */
-    public function __construct(int $id, string $firstName, string $lastName, string $email, string $password, string $state, $birthday)
+    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTimeImmutable $birthday)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -65,113 +64,113 @@ class AddContributorRequest
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
+     * @param int|null $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id): void
     {
         $this->id = $id;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getFirstName(): string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
 
     /**
-     * @param string $firstName
+     * @param string|null $firstName
      */
-    public function setFirstName(string $firstName): void
+    public function setFirstName(?string $firstName): void
     {
         $this->firstName = $firstName;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLastName(): string
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
 
     /**
-     * @param string $lastName
+     * @param string|null $lastName
      */
-    public function setLastName(string $lastName): void
+    public function setLastName(?string $lastName): void
     {
         $this->lastName = $lastName;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
     /**
-     * @param string $email
+     * @param string|null $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
 
     /**
-     * @param string $password
+     * @param string|null $password
      */
-    public function setPassword(string $password): void
+    public function setPassword(?string $password): void
     {
         $this->password = $password;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getState(): string
+    public function getState(): ?string
     {
         return $this->state;
     }
 
     /**
-     * @param string $state
+     * @param string|null $state
      */
-    public function setState(string $state): void
+    public function setState(?string $state): void
     {
         $this->state = $state;
     }
 
     /**
-     * @return \DateTime
+     * @return DateTimeImmutable|null
      */
-    public function getBirthday(): \DateTime
+    public function getBirthday(): ?DateTimeImmutable
     {
         return $this->birthday;
     }
 
     /**
-     * @param \DateTime $birthday
+     * @param DateTimeImmutable|null $birthday
      */
-    public function setBirthday(\DateTime $birthday): void
+    public function setBirthday(?DateTimeImmutable $birthday): void
     {
         $this->birthday = $birthday;
     }

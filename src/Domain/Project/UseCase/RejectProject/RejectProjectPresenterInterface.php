@@ -4,11 +4,18 @@
 namespace App\Domain\Project\UseCase\RejectProject;
 
 
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 interface RejectProjectPresenterInterface
 {
     /**
      * @param RejectProjectResponse $rejectProjectResponse
-     * @return mixed
+     * @return void
      */
-    public function present(RejectProjectResponse $rejectProjectResponse);
+    public function present(RejectProjectResponse $rejectProjectResponse): void;
+
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 }

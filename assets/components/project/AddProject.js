@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/form.css';
+import '../../styles/layout/styles/inputFileStyle.css';
 import '../../styles/layout/scripts/form';
 
 export default class AddProject extends React.Component {
@@ -38,9 +38,9 @@ export default class AddProject extends React.Component {
     render() {
 
         return (
-            <div className="container-fluid px-1 py-5 mx-auto ">
+            <div className="container-fluid px-1 py-5 mx-auto mt-4">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                    <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center mt-4">
                         <h3>Create Your Project</h3>
                         <p className="text-primary">Just answer a few questions<br /> so that we can personalize the right
                             experience for you.</p>
@@ -52,14 +52,14 @@ export default class AddProject extends React.Component {
                                         <label className="form-control-label px-3">
                                             Title <span className="text-danger"> *</span>
                                         </label>
-                                        <input type="text" id="title" ref={this.title} />
+                                        <input type="text" id="title" ref={ this.title } />
                                     </div>
                                     <div className="form-group col-sm-6 flex-column d-flex">
                                         <label className="form-control-label px-3">
                                             Project description
                                             <span className="text-danger"> *</span>
                                         </label>
-                                        <input type="text" id="description" ref={this.description} className="in"/>
+                                        <input type="text" id="description" ref={ this.description } className="in"/>
                                     </div>
                                 </div>
                                 <div className="row justify-content-between text-left">

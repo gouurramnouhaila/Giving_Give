@@ -8,11 +8,12 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class FindAllContributor
 {
-
+    /**
+     * @var ContributorRepository
+     */
     private ContributorRepository $contributorRepository;
 
     /**
-     * FindAllContributor constructor.
      * @param ContributorRepository $contributorRepository
      */
     public function __construct(ContributorRepository $contributorRepository)
@@ -20,7 +21,8 @@ class FindAllContributor
         $this->contributorRepository = $contributorRepository;
     }
 
-    public function execute(FindAllContributorPresenterInterface $presenter) {
+
+    public function execute(FindAllContributorPresenterInterface $presenter): void {
         $contributors = $this->contributorRepository->findAll();
 
         $presenter->present(new FindAllContributorResponse($contributors));

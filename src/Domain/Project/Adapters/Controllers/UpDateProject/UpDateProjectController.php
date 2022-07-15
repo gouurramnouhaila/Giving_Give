@@ -3,31 +3,29 @@
 
 namespace App\Domain\Project\Adapters\Controllers\UpDateProject;
 
-use App\Domain\Project\Adapters\Controllers\UpDateProject\UpDateProjetJsonPresenter;
 use App\Domain\Project\UseCase\UpDateProject\UpDateProject;
 use App\Domain\Project\UseCase\UpDateProject\UpDateProjectRequest;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class UpDateProjectController
 {
     /**
-     * @param UpDateProject $usecase
+     * @param UpDateProject $useCase
      * @param Request $request
-     * @throws \App\Domain\Project\Entities\Exceptions\ProjectNotFoundException
-     * @Route(path="/projects/{id}/update",name="app_project_update",methods={"PUT"})
-     *
+     * @return JsonResponse
+     * @Route(path="/api/projects/update/{id}",name="app_project_update",methods={"PUT"})
      */
-    public function __invoke(UpDateProject $usecase, Request $request)
+    public function __invoke(UpDateProject $useCase, Request $request): JsonResponse
     {
-        $presenter = new \App\Domain\Project\Adapters\Controllers\UpDateProject\UpDateProjetJsonPresenter();
+        $presenter = new UpDateProjectJsonPresenter();
 
         $data = json_decode($request->getContent(), true);
-        $id = intval( $request->get('id'));
 
-        $requestDto = new UpDateProjectRequest( $id,$data['title'], $data['description'], $data['photo'], $data['video'], $data['objectiveFund'],$data['projectHolderId'], $data['categoryId']);
+        $requestDto = new UpDateProjectRequest( (int) $request->get('id') ,$data['title'], $data['description'], $data['photo'], $data['video'], $data['objectiveFund'], $data['projectHolderId'], null, $data['idCategory']);
 
-        $usecase->execute($requestDto, $presenter);
+        $useCase->execute($requestDto, $presenter);
 
         return $presenter->getResponse();
     }

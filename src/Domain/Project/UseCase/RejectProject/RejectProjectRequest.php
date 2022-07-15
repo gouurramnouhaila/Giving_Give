@@ -7,15 +7,14 @@ namespace App\Domain\Project\UseCase\RejectProject;
 class RejectProjectRequest
 {
     /**
-     * @var int
+     * @var int|null
      */
-    private int $id;
+    private ?int $id = null;
 
     /**
-     * FindProjectRequest constructor.
-     * @param int $id
+     * @param int|null $id
      */
-    public function __construct(int $id)
+    public function __construct(?int $id)
     {
         $this->id = $id;
     }

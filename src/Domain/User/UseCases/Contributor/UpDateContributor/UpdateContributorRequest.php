@@ -4,55 +4,55 @@
 namespace App\Domain\User\UseCases\Contributor\UpDateContributor;
 
 
+use DateTimeImmutable;
+
 class UpdateContributorRequest
 {
     /**
-     * @var int
+     * @var int|null
      */
-    public int $id;
+    public ?int $id = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $firstName;
+    public ?string $firstName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $lastName;
+    public ?string $lastName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $email;
+    public ?string $email = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $password;
+    public ?string $password = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $state;
-
-
-    /**
-     * @var DateTime
-     */
-    public \DateTime $birthday;
+    public ?string $state = null;
 
     /**
-     * UpdateContributorRequest constructor.
-     * @param int $id
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $email
-     * @param string $password
-     * @param string $state
-     * @param DateTime|\DateTime $birthday
+     * @var DateTimeImmutable|null
      */
-    public function __construct(int $id, string $firstName, string $lastName, string $email, string $password, string $state, $birthday)
+    public ?DateTimeImmutable $birthday = null;
+
+    /**
+     * @param int|null $id
+     * @param string|null $firstName
+     * @param string|null $lastName
+     * @param string|null $email
+     * @param string|null $password
+     * @param string|null $state
+     * @param DateTimeImmutable|null $birthday
+     */
+    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTimeImmutable $birthday)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -62,113 +62,5 @@ class UpdateContributorRequest
         $this->state = $state;
         $this->birthday = $birthday;
     }
-
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-
-    /**
-     * @return string
-     */
-    public function getFirstName(): string
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param string $firstName
-     */
-    public function setFirstName(string $firstName): void
-    {
-        $this->firstName = $firstName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastName(): string
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * @param string $lastName
-     */
-    public function setLastName(string $lastName): void
-    {
-        $this->lastName = $lastName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    /**
-     * @param string $password
-     */
-    public function setPassword(string $password): void
-    {
-        $this->password = $password;
-    }
-
-    /**
-     * @return string
-     */
-    public function getState(): string
-    {
-        return $this->state;
-    }
-
-    /**
-     * @param string $state
-     */
-    public function setState(string $state): void
-    {
-        $this->state = $state;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getBirthday(): \DateTime
-    {
-        return $this->birthday;
-    }
-
-    /**
-     * @param DateTime $birthday
-     */
-    public function setBirthday(DateTime $birthday): void
-    {
-        $this->birthday = $birthday;
-    }
-
-
-
 
 }

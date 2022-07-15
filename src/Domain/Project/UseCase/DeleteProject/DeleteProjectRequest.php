@@ -6,26 +6,24 @@ namespace App\Domain\Project\UseCase\DeleteProject;
 
 class DeleteProjectRequest
 {
-    private int $idProject;
+    /**
+     * @var int|null
+     */
+    private ?int $id = null;
 
     /**
-     * DeleteProjectRequest constructor.
-     * @param int $idProject
+     * @param int|null $id
      */
-    public function __construct(int $idProject)
+    public function __construct(?int $id)
     {
-        $this->idProject = $idProject;
+        $this->id = $id;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getIdProject(): int
+    public function getId(): ?int
     {
-        return $this->idProject;
+        return $this->id;
     }
-
-
-
-
 }

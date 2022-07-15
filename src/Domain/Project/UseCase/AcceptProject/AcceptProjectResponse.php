@@ -6,53 +6,33 @@ namespace App\Domain\Project\UseCase\AcceptProject;
 
 class AcceptProjectResponse
 {
-    public $status;
-
-    public $statusCode;
+    /**
+     * @var bool|null
+     */
+    public ?bool $status = null;
 
     /**
-     * AcceptProjectResponse constructor.
-     * @param $status
-     * @param $statusCode
+     * @param bool|null $status
      */
-    public function __construct($status, $statusCode)
+    public function __construct(?bool $status)
     {
         $this->status = $status;
-        $this->statusCode = $statusCode;
     }
 
-
     /**
-     * @return mixed
+     * @return bool|null
      */
-    public function getStatus()
+    public function getStatus():?bool
     {
         return $this->status;
     }
 
     /**
-     * @param mixed $status
+     * @param bool $status
+     * @return void
      */
-    public function setStatus($status): void
+    public function setStatus(bool $status): void
     {
         $this->status = $status;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getStatusCode()
-    {
-        return $this->statusCode;
-    }
-
-    /**
-     * @param mixed $statusCode
-     */
-    public function setStatusCode($statusCode): void
-    {
-        $this->statusCode = $statusCode;
-    }
-
-
 }

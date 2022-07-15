@@ -10,6 +10,7 @@ interface DeleteContributorPresenterInterface
 {
     /**
      * @param DeleteContributorResponse $response
+     * @return void
      */
     public function present(DeleteContributorResponse $response): void ;
 

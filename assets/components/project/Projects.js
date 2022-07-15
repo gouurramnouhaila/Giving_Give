@@ -1,6 +1,5 @@
 import React from "react";
-import "./../../styles/projectList.css";
-import axios from 'axios';
+import "../../styles/layout/styles/cardList.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHourglass, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,13 +14,18 @@ export default class Projects extends React.Component {
         super();
     }
 
-
     render() {
+        const { onDeleteProject } = this.props;
+        const handleDeleteClick = function (event, id) {
+            event.preventDefault();
+
+            onDeleteProject(id);
+        }
         return (
             <div>
                 <div className="container mt-5 mb-5">
                     { this.props.projects.map(project =>
-                    <div className="d-flex justify-content-center row mb-5">
+                    <div className="d-flex justify-content-center row mb-5" key={project.id}>
                         <div className="col-md-10">
                             <div className="row p-2 bg-white border rounded">
                                 <div className="col-md-3 mt-1"><img
@@ -41,11 +45,11 @@ export default class Projects extends React.Component {
                                                   <b> <FontAwesomeIcon icon={faPeopleGroup} />    Contribution</b>
                                               </li>
                                               <li>
-                                                  <p>
-                                                      <div className="mt-1 mb-1 spec-1">
+                                                  <div className="mt-1 mb-1 spec-1">
+                                                      <p>
                                                           <span>0 </span>
-                                                      </div>
-                                                  </p>
+                                                      </p>
+                                                  </div>
                                               </li>
                                         </ul>
                                         <ul className="ul">
@@ -53,11 +57,11 @@ export default class Projects extends React.Component {
                                                 <b> <FontAwesomeIcon icon={faHourglass} /> Remaining  </b>
                                             </li>
                                             <li>
-                                                <p>
-                                                    <div className="mt-1 mb-1 spec-1">
+                                                <div className="mt-1 mb-1 spec-1">
+                                                    <p>
                                                         <span>12 Days</span>
-                                                    </div>
-                                                </p>
+                                                    </p>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -77,7 +81,11 @@ export default class Projects extends React.Component {
                                           </li>
                                       </ul>
                                     </div>
-                                    <h6 className="text-success mt-3">Free shipping</h6>
+                                    <h6 className="text-success mt-3">
+                                        <a href="#" onClick={(event) => handleDeleteClick(event, project.id)}>
+                                            <i className="fas fa-trash"></i>
+                                        </a>
+                                    </h6>
                                     <div className="d-flex flex-column mt-4">
                                         <button className="btn btn-primary btn-sm" type="button">Fund</button>
                                         <button className="btn btn-outline-primary btn-sm mt-2" type="button">

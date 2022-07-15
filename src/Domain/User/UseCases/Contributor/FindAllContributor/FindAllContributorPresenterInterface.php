@@ -4,12 +4,19 @@
 namespace App\Domain\User\UseCases\Contributor\FindAllContributor;
 
 
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 interface FindAllContributorPresenterInterface
 {
 
     /**
      * @param FindAllContributorResponse $response
-     * @return mixed
+     * @return void
      */
-    public function present(FindAllContributorResponse $response);
+    public function present(FindAllContributorResponse $response): void;
+
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 }

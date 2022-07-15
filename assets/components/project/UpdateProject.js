@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/form.css';
+import '../../styles/layout/styles/inputFileStyle.css';
 import '../../styles/layout/scripts/form';
 
 export default class UpdateProject extends React.Component {

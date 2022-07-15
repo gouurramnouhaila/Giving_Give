@@ -10,6 +10,7 @@ File: Layout CSS
 */
 
 @import url("fontawesome-free/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 @import url("framework.css");
 
 /* Rows
@@ -20,6 +21,10 @@ File: Layout CSS
 .row3, .row3 a{}
 .row4, .row4 a{}
 .row5, .row5 a{}
+
+.font {
+	font-family: 'Josefin Sans', sans-serif;
+}
 
 
 /* Top Bar
@@ -235,8 +240,8 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
 #mainav .drop::after{top:35px; left:5px;}
 #mainav li li .drop::after{top:15px; left:5px;}
-#mainav ul ul{visibility:hidden; opacity:0;}
-#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+#mainav ul ul{visibility:hidden; opacity:0;color: white;}
+#mainav ul li:hover > ul{visibility:visible; opacity:2;}
 
 #mainav form{display:none; width:100%; margin:0; padding:0;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
@@ -362,8 +367,14 @@ input:focus, textarea:focus, *:required:focus{border-color:#8EC837 !important;}
 
 /* Header */
 #header{color:#FFFFFF; background-color:#8EC837;}
-#header #logo a{color:inherit;}
+#header #logo a{
+	color:inherit;
+	font-size: 26px;
+}
 
+#header ul li a:hover {
+	color: white;
+}
 
 /* Content */
 #introblocks figure figcaption > a{color:#FFFFFF; background-color:#8EC837;}

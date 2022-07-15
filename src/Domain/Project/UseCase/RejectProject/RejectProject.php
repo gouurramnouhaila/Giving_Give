@@ -19,20 +19,12 @@ class RejectProject
 
     /**
      * @param RejectProjectRequest $request
-     * @param RejectProjectPresenterInterface $presenterà
+     * @param RejectProjectPresenterInterface $presenter
+
      */
     public function execute(RejectProjectRequest $request, RejectProjectPresenterInterface $presenter) {
-        $p = $this->projectRepository->find($request->getId());
 
-        if ($p == null) {
-            throw new ProjectNotFoundException();
-        }
-
-        $project = new Project($p->getId(),$p->getTitle(),$p->getDescription(),$p->getPhoto(),$p->getVideo(),$p->getObjectiveFund(),null,$p->getCategory()->getId());
-
-        $this->projectRepository->reject($project);
-
-        $presenter->present(new RejectProjectResponse('Project with ID'.$project->getId().' is refused', 200));
-
+        $this->projectRepository->reject($request->getId());
+        $presenter->present(new RejectProjectResponse('Project with ID'.$request->getId().' is refused', 200));
     }
 }

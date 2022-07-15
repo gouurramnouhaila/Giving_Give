@@ -6,17 +6,24 @@ namespace App\Domain\User\UseCases\Contributor\FindContributor;
 
 class FindContributorRequest
 {
-
-    public $contributorId;
+    /**
+     * @var int|null
+     */
+    private ?int $id = null;
 
     /**
-     * FindContributorRequest constructor.
-     * @param $contributorId
+     * @param int|null $id
      */
-    public function __construct($contributorId)
+    public function __construct(?int $id)
     {
-        $this->contributorId = $contributorId;
+        $this->id = $id;
     }
 
-
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 }

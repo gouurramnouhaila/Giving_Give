@@ -6,16 +6,30 @@ namespace App\Domain\User\UseCases\Contributor\DeleteContributor;
 
 class DeleteContributorResponse
 {
-    public bool $success;
+    public ?bool $status = null;
 
     /**
-     * DeleteProjectHolderResponse constructor.
-     * @param $success bool
+     * @param $status
      */
-    function __construct($success)
+    public function __construct($status)
     {
-        $this->success = $success;
-
+        $this->status = $status;
     }
 
+    /**
+     * @return bool|null
+     */
+    public function getStatus(): ?bool
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param bool|null $status
+     * @return void
+     */
+    public function setStatus(?bool $status): void
+    {
+        $this->status = $status;
+    }
 }

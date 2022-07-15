@@ -6,35 +6,32 @@ namespace App\Domain\User\UseCases\Contributor\FindAllContributor;
 
 class FindAllContributorResponse
 {
-
-    private $contributors;
+    /**
+     * @var array|null
+     */
+    private ?array $contributors = null;
 
     /**
-     * FindAllContributorResponse constructor.
-     * @param $contributors
+     * @param array|null $contributors
      */
-    public function __construct($contributors)
+    public function __construct(?array $contributors)
     {
         $this->contributors = $contributors;
     }
 
     /**
-     * @return mixed
+     * @return array|null
      */
-    public function getContributors()
+    public function getContributors(): ?array
     {
         return $this->contributors;
     }
 
     /**
-     * @param mixed $contributors
+     * @param array|null $contributors
      */
-    public function setContributors($contributors): void
+    public function setContributors(?array $contributors): void
     {
         $this->contributors = $contributors;
     }
-
-
-
-
 }

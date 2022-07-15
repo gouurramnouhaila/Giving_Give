@@ -4,43 +4,32 @@
 namespace App\Domain\Project\UseCase\DeleteProject;
 
 
-use phpDocumentor\Reflection\Types\Boolean;
-
 class DeleteProjectResponse
 {
-    private  $success;
+    public ?bool $status = null;
 
     /**
-     * @return mixed
+     * @param $status
      */
-    public function getSuccess()
+    public function __construct($status)
     {
-        return $this->success;
+        $this->status = $status;
     }
 
     /**
-     * @param mixed $success
+     * @return bool|null
      */
-    public function setSuccess($success): void
+    public function getStatus(): ?bool
     {
-        $this->success = $success;
+        return $this->status;
     }
-
 
     /**
-     * DeleteProjectResponse constructor.
-     * @param string $success
-     * @param int $status_message
+     * @param bool|null $status
+     * @return void
      */
-    public function __construct($success)
+    public function setStatus(?bool $status): void
     {
-        $this->$success = $success;
-
+        $this->status = $status;
     }
-
-
-
-
-
-
 }

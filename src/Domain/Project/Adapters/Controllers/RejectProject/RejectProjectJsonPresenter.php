@@ -10,12 +10,15 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class RejectProjectJsonPresenter implements RejectProjectPresenterInterface
 {
-    private $message;
+    /**
+     * @var bool|null
+     */
+    private ?bool $message = null;
 
     /**
      * @inheritDoc
      */
-    public function present(RejectProjectResponse $rejectProjectResponse)
+    public function present(RejectProjectResponse $rejectProjectResponse): void
     {
         $this->message = $rejectProjectResponse->status;
     }

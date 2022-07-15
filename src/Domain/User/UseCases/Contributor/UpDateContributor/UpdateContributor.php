@@ -9,10 +9,12 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class UpdateContributor
 {
+    /**
+     * @var ContributorRepository
+     */
     private ContributorRepository $contributorRepository;
 
     /**
-     * FindAllContributor constructor.
      * @param ContributorRepository $contributorRepository
      */
     public function __construct(ContributorRepository $contributorRepository)
@@ -20,13 +22,12 @@ class UpdateContributor
         $this->contributorRepository = $contributorRepository;
     }
     
-    public function execute(UpdateContributorRequest $request, UpdateContributorPresenterInterface $presenter) {
-        $contributor = $this->contributorRepository->findOne($request->id);
+    public function execute(UpdateContributorRequest $request, UpdateContributorPresenterInterface $presenter): void {
+
+        $contributor = new Contributor($request->id, $request->firstName, $request->lastName, $request->email, $request->password, $request->state, $request->birthday);
         
-        $contributorEntity = new Contributor($request->getId(), $request->getFirstName(), $request->getLastName(), $request->getEmail(), $request->getPassword(), $request->getState(), $request->getBirthday());
+        $this->contributorRepository->upDate($contributor);
         
-        $contributorModify = $this->contributorRepository->upDate($contributorEntity);
-        
-        $presenter->present($contributorEntity);
+        $presenter->present($contributor);
     }
 }

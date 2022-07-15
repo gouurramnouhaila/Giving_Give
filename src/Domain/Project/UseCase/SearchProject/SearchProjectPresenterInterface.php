@@ -4,10 +4,18 @@
 namespace App\Domain\Project\UseCase\SearchProject;
 
 
-use App\Domain\Project\Entities\Project;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 interface SearchProjectPresenterInterface
 {
+    /**
+     * @param SearchProjectResponse $searchProjectResponse
+     * @return void
+     */
+    public function present(SearchProjectResponse $searchProjectResponse): void;
 
-    public function present(SearchProjectResponse $searcProjectResponse);
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 }

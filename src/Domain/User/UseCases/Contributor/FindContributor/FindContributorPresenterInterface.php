@@ -4,7 +4,7 @@
 namespace App\Domain\User\UseCases\Contributor\FindContributor;
 
 
-use App\Domain\User\Adapters\Gateway\Doctrine\Contributor;
+use App\Domain\User\Entities\Contributor;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 interface FindContributorPresenterInterface

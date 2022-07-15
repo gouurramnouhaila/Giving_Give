@@ -4915,6 +4915,10 @@ fieldset:disabled .btn {
     color: #fff;
 }
 
+.m-lef-80{
+    margin-left: 200px;
+}
+
 .card {
     position: relative;
     display: -ms-flexbox;
@@ -5372,6 +5376,7 @@ fieldset:disabled .btn {
     padding: 1rem 1rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
+    width: 100%;
     border-radius: 0.4rem;
 }
 
@@ -7599,7 +7604,7 @@ fieldset:disabled .btn {
 }
 
 .border-1 {
-    border-width: 1px !important;
+    border-width: 1px !important;border-color: darkgrey;
 }
 
 .border-2 {
@@ -8396,6 +8401,8 @@ fieldset:disabled .btn {
 .text-center {
     text-align: center !important;
 }
+
+
 
 .text-decoration-none {
     text-decoration: none !important;

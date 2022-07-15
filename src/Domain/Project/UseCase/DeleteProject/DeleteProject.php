@@ -4,11 +4,8 @@
 namespace App\Domain\Project\UseCase\DeleteProject;
 
 
-
-
-use App\Domain\Project\Entities\Exceptions\ProjectNotFoundException;
 use App\Domain\Project\Entities\ProjectRepository;
-use Symfony\Component\HttpFoundation\Request;
+
 
 class DeleteProject
 {
@@ -26,21 +23,10 @@ class DeleteProject
         $this->repository = $repository;
     }
 
-
-    /**
-     * @param DeleteProjectRequest $request
-     * @param DeleteProjectPresenterInterface $presenter
-     */
-    public function execute(DeleteProjectRequest $request, DeleteProjectPresenterInterface $presenter)
+    public function execute(DeleteProjectRequest $request, DeleteProjectPresenterInterface $presenter): void
     {
-        $project = $this->repository->find($request->getIdProject());
+        $status = $this->repository->delete($request->getId());
 
-        if ($project == null) {
-            throw new ProjectNotFoundException();
-        }
-
-        $success = $this->repository->delete($project->getId());
-
-        $presenter->present(new DeleteProjectResponse($success));
+        $presenter->present(new DeleteProjectResponse($status));
     }
 }

@@ -4,11 +4,18 @@
 namespace App\Domain\Project\UseCase\DeleteProject;
 
 
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 interface DeleteProjectPresenterInterface
 {
     /**
      * @param DeleteProjectResponse $deleteProjectResponse
-     * @return mixed
+     * @return void
      */
-    public function present(DeleteProjectResponse $deleteProjectResponse);
+    public function present(DeleteProjectResponse $deleteProjectResponse): void;
+
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 }

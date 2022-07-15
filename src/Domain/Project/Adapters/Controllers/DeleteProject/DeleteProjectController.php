@@ -6,27 +6,21 @@ namespace App\Domain\Project\Adapters\Controllers\DeleteProject;
 
 use App\Domain\Project\UseCase\DeleteProject\DeleteProject;
 use App\Domain\Project\UseCase\DeleteProject\DeleteProjectRequest;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DeleteProjectController
 {
 
-
     /**
-     * @param DeleteProject $useCase
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     * @Route(path="/projects/{id}/delete",name="app_project_delete")
+     * @Route(path="/api/projects/delete/{id}",name="app_projects_delete")
      */
-    public function __invoke(DeleteProject $useCase, Request $request)
+    public function __invoke(DeleteProject $useCase, Request $request): JsonResponse
     {
         $presenter = new DeleteProjectJsonPresenter();
 
-        $data = $request->get('id');
-
-
-        $requestDto = new DeleteProjectRequest(intval($data));
+        $requestDto = new DeleteProjectRequest((int) $request->get('id'));
 
         $useCase->execute($requestDto, $presenter);
 
