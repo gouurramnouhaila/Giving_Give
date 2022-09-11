@@ -7,10 +7,10 @@ namespace App\Domain\User\Entities;
 interface ProjectHolderRepository
 {
     /**
-     * @param ProjectHolder $contributor
-     * @return mixed
+     * @param ProjectHolder $projectHolder
+     * @return void
      */
-    public function add(ProjectHolder $projectHolder);
+    public function add(ProjectHolder $projectHolder): void;
 
     /**
      * @param int $id
@@ -22,7 +22,7 @@ interface ProjectHolderRepository
      * @param ProjectHolder $projectHolder
      * @return ProjectHolder
      */
-    public function upDate(ProjectHolder $projectHolder): \App\Domain\User\Adapters\Gateway\Doctrine\ProjectHolder;
+    public function upDate(ProjectHolder $projectHolder): ProjectHolder;
 
     /**
      * @param int $id

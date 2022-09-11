@@ -7,13 +7,17 @@ use App\Domain\Project\Adapters\Gateway\Doctrine\ProjectEntity;
 
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\User;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Http\Authenticator\JsonLoginAuthenticator;
 
 /**
  * Class ProjectHolder
  * @package App\Domain\User\Adapters\Gateway\Doctrine
  * @ORM\Entity(repositoryClass="DoctrineProjectHolderRepository")
+ * @method string getUserIdentifier()
  */
-class ProjectHolder
+class ProjectHolder implements UserInterface
 {
     /**
      * @ORM\Id
@@ -68,29 +72,8 @@ class ProjectHolder
      */
     private $projects;
 
+    private $apiToken;
 
-    /**
-     * ProjectHolder constructor.
-     * @param $firstName
-     * @param $lastName
-     * @param $email
-     * @param $password
-     * @param $verify
-     * @param $photo
-     * @param $bio
-     * @param $birthday
-     */
-    public function __construct($firstName, $lastName, $email, $password, $state, $photo, $bio, $birthday)
-    {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->email = $email;
-        $this->password = $password;
-        $this->state = $state;
-        $this->photo = $photo;
-        $this->bio = $bio;
-        $this->birthday = $birthday;
-    }
 
     /**
      * @return mixed
@@ -230,7 +213,45 @@ class ProjectHolder
         return $this->id;
     }
 
+    public function getRoles()
+    {
+        return ['ROLE_PROJECT_HOLDER'];
+    }
 
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
 
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getUsername(): string
+    {
+        return $this->email;
+    }
+
+    public function __call($name, $arguments)
+    {
+       $this->getUserIdentifier($name, $arguments);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getApiToken()
+    {
+        return $this->apiToken;
+    }
+
+    /**
+     * @param mixed $apiToken
+     */
+    public function setApiToken($apiToken): void
+    {
+        $this->apiToken = $apiToken;
+    }
 
 }

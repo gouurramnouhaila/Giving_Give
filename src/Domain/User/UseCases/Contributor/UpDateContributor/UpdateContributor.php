@@ -9,14 +9,8 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class UpdateContributor
 {
-    /**
-     * @var ContributorRepository
-     */
     private ContributorRepository $contributorRepository;
 
-    /**
-     * @param ContributorRepository $contributorRepository
-     */
     public function __construct(ContributorRepository $contributorRepository)
     {
         $this->contributorRepository = $contributorRepository;

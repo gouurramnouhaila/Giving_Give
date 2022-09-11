@@ -4,7 +4,7 @@
 namespace App\Domain\User\UseCases\Contributor\AddContributor;
 
 
-use DateTimeImmutable;
+use DateTime;
 
 class AddContributorRequest
 {
@@ -39,9 +39,9 @@ class AddContributorRequest
     private ?string $state = null;
 
     /**
-     * @var DateTimeImmutable|null
+     * @var DateTime|null
      */
-    private ?DateTimeImmutable $birthday = null;
+    private ?DateTime $birthday = null;
 
     /**
      * @param int|null $id
@@ -50,9 +50,9 @@ class AddContributorRequest
      * @param string|null $email
      * @param string|null $password
      * @param string|null $state
-     * @param DateTimeImmutable|null $birthday
+     * @param DateTime|null $birthday
      */
-    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTimeImmutable $birthday)
+    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTime $birthday)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -160,22 +160,18 @@ class AddContributorRequest
     }
 
     /**
-     * @return DateTimeImmutable|null
+     * @return DateTime|null
      */
-    public function getBirthday(): ?DateTimeImmutable
+    public function getBirthday(): ?DateTime
     {
         return $this->birthday;
     }
 
     /**
-     * @param DateTimeImmutable|null $birthday
+     * @param DateTime|null $birthday
      */
-    public function setBirthday(?DateTimeImmutable $birthday): void
+    public function setBirthday(?DateTime $birthday): void
     {
         $this->birthday = $birthday;
     }
-
-
-
-
 }

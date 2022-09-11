@@ -1,39 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../styles/layout/styles/cardList.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHourglass, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
+import {Link, useParams} from "react-router-dom";
+import axios from "axios";
+import {getProjects} from "../api/projects_api";
+import img1 from "./images/img1.jpg";
+import img2 from "./images/img2.jpg";
+import img3 from "./images/img3.jpg";
 
+export default function Projects(props)  {
 
-
-
-
-
-export default class Projects extends React.Component {
-
-    constructor() {
-        super();
-    }
-
-    render() {
-        const { onDeleteProject } = this.props;
+        const { onDeleteProject,getOneProjects } = props;
         const handleDeleteClick = function (event, id) {
             event.preventDefault();
 
             onDeleteProject(id);
         }
+
+        const [project, setProject] = useState([]);
+
+
         return (
             <div>
                 <div className="container mt-5 mb-5">
-                    { this.props.projects.map(project =>
+                    {props.projects.map( project =>
                     <div className="d-flex justify-content-center row mb-5" key={project.id}>
                         <div className="col-md-10">
                             <div className="row p-2 bg-white border rounded">
-                                <div className="col-md-3 mt-1"><img
+                                <div className="col-md-3 mt-1"><img style={{width: "200px", height: "220px"}}
                                     className="img-fluid img-responsive rounded product-image mt-2"
-                                    src="https://picsum.photos/300/300" /></div>
+                                                                    src={ require(`./images/${project.photo}`) }  /></div>
                                 <div className="col-md-6 mt-1">
                                     <h5>{project.title}</h5>
-                                    <p className="min-text">By Nouhaila</p>
+                                    <p className="min-text">By Sable paris</p>
                                     <div className="d-flex flex-row">
                                         <div className="ratings mr-2"><i className="fa fa-star"></i><i
                                             className="fa fa-star"></i><i className="fa fa-star"></i><i
@@ -47,7 +47,7 @@ export default class Projects extends React.Component {
                                               <li>
                                                   <div className="mt-1 mb-1 spec-1">
                                                       <p>
-                                                          <span>0 </span>
+                                                          <span>54 </span>
                                                       </p>
                                                   </div>
                                               </li>
@@ -66,31 +66,24 @@ export default class Projects extends React.Component {
                                         </ul>
                                     </div>
                                     <p className="mb-0 max-text">
-                                        “{project.description} Lorem ipsum dolor sit amet, consectetur,<br /> sed do eiusmod tempor incididunt ut<br/> labore et dolore magna aliqua.”
+                                        {project.description}
                                         <br />
                                     </p>
                                 </div>
                                 <div className="align-items-center align-content-center col-md-3 border-left mt-1">
                                     <div className="d-flex flex-row align-items-center">
-                                      <ul className="ul mt-4">
+                                      <ul className="ul mt-4" style={{height: "62px"}}>
                                           <li>
                                               <p style={{ fontSize: "20px" }}>
-                                                  { project.objectiveFund } $
-                                                  <span className="m-lg-3 text-danger" style={{ fontSize: "14px" }} >Out of 3000 $$</span>
+                                                  {project.objectiveFund}$ <br/>
+                                                  <span className="m-lg-3 text-danger" style={{ fontSize: "14px"}} >Out of  2,500  $$</span>
                                               </p>
                                           </li>
                                       </ul>
                                     </div>
-                                    <h6 className="text-success mt-3">
-                                        <a href="#" onClick={(event) => handleDeleteClick(event, project.id)}>
-                                            <i className="fas fa-trash"></i>
-                                        </a>
-                                    </h6>
                                     <div className="d-flex flex-column mt-4">
-                                        <button className="btn btn-primary btn-sm" type="button">Fund</button>
-                                        <button className="btn btn-outline-primary btn-sm mt-2" type="button">
-                                            Show Details
-                                        </button>
+                                        <Link to={`/fund/${project.id}/`} className="btn btn-primary btn-sm" style={{width: '200px'}}>Fund</Link>
+                                        <Link to={`/projects/${project.id}/`} className="btn btn-outline-primary btn-sm mt-2" style={{width:'200px'}}>Show Details</Link>
                                     </div>
                                 </div>
                             </div>
@@ -100,5 +93,4 @@ export default class Projects extends React.Component {
                 </div>
             </div>
         )
-    }
 }

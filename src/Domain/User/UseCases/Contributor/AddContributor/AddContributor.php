@@ -9,13 +9,8 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class AddContributor
 {
-
     private ContributorRepository $contributorRepository;
 
-    /**
-     * AddContributor constructor.
-     * @param ContributorRepository $contributorRepository
-     */
     public function __construct(ContributorRepository $contributorRepository)
     {
         $this->contributorRepository = $contributorRepository;

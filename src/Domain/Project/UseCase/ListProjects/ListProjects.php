@@ -15,9 +15,10 @@ class ListProjects
         $this->projectRepository = $projectRepository;
     }
 
-    public function execute(ListProjectsPresenterInterface $presenter) {
+    public function execute(ListProjectsPresenterInterface $presenter): void {
 
         $projects = $this->projectRepository->findAll();
+
         $response = new ListProjectsResponse($projects);
 
         $presenter->present($response);

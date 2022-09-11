@@ -7,6 +7,7 @@ namespace App\Domain\Project\Adapters\Controllers\SearchProject;
 use App\Domain\Project\Adapters\Controllers\SearchProject\SearchProjectJsonPresenter;
 use App\Domain\Project\UseCase\SearchProject\SearchProject;
 use App\Domain\Project\UseCase\SearchProject\SearchProjectRequest;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -15,15 +16,13 @@ class SearchProjectController
 {
 
     /**
-     * @Route(path="/projects/{keyword}/search",name="app_projects_search",methods={"GET"})
+     * @Route(path="/api/projects/{keyword}/search",name="app_projects_search",methods={"GET"})
      */
-    public function __invoke(SearchProject $useCase, Request $request,SerializerInterface $serializer)
+    public function __invoke(SearchProject $useCase, Request $request,SerializerInterface $serializer): JsonResponse
     {
-        $presenter = new SearchProjectJsonPresenter();
+        $presenter = new SearchProjectJsonPresenter($serializer);
 
-        $keyword = $request->get('keyword');
-
-        $requestDto = new SearchProjectRequest($keyword);
+        $requestDto = new SearchProjectRequest($request->get('keyword'));
 
         $useCase->execute($requestDto, $presenter);
 

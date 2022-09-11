@@ -6,7 +6,8 @@ namespace App\Domain\User\UseCases\ProjectHolder\FindProjectHolder;
 
 
 
-use App\Domain\User\Adapters\Gateway\Doctrine\ProjectHolder;
+use App\Domain\User\Entities\ProjectHolder;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 interface FindProjectHolderPresenterInterface
 {
@@ -15,5 +16,10 @@ interface FindProjectHolderPresenterInterface
      * @return mixed
      */
     public function present(ProjectHolder $projectHolder);
+
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 
 }

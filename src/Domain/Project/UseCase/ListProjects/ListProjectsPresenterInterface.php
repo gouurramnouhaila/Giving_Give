@@ -10,9 +10,9 @@ interface ListProjectsPresenterInterface
 {
     /**
      * @param ListProjectsResponse $listProjectsResponse
-     * @return mixed
+     * @return void
      */
-    public function present(ListProjectsResponse $listProjectsResponse);
+    public function present(ListProjectsResponse $listProjectsResponse): void;
 
     /**
      * @return JsonResponse

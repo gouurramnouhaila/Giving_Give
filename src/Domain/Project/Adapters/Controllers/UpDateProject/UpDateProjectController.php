@@ -3,6 +3,7 @@
 
 namespace App\Domain\Project\Adapters\Controllers\UpDateProject;
 
+use App\Domain\Project\Entities\Exceptions\ProjectNotFoundException;
 use App\Domain\Project\UseCase\UpDateProject\UpDateProject;
 use App\Domain\Project\UseCase\UpDateProject\UpDateProjectRequest;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -16,6 +17,7 @@ class UpDateProjectController
      * @param Request $request
      * @return JsonResponse
      * @Route(path="/api/projects/update/{id}",name="app_project_update",methods={"PUT"})
+     * @throws ProjectNotFoundException
      */
     public function __invoke(UpDateProject $useCase, Request $request): JsonResponse
     {
@@ -29,5 +31,4 @@ class UpDateProjectController
 
         return $presenter->getResponse();
     }
-
 }

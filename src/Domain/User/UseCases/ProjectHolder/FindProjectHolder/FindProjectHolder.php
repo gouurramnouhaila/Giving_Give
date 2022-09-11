@@ -15,9 +15,9 @@ class FindProjectHolder
         $this->projectHolderRepository = $projectHolderRepository;
     }
 
-    public function execute(FindProjectHolderRequest $request, FindProjectHolderPresenterInterface $presenter)
+    public function execute(FindProjectHolderRequest $request, FindProjectHolderPresenterInterface $presenter): void
     {
-        $projectHolder = $this->projectHolderRepository->find($request->idProjectHolder);
+        $projectHolder = $this->projectHolderRepository->findOne($request->getId());
 
         $presenter->present($projectHolder);
     }

@@ -9,25 +9,15 @@ use App\Domain\User\Entities\ProjectHolder;
 
 class AddProjectHolder
 {
-
     private DoctrineProjectHolderRepository $projectHolderRepository;
 
-    /**
-     * AddProjectHolder constructor.
-     * @param DoctrineProjectHolderRepository $projectHolderRepository
-     */
     public function __construct(DoctrineProjectHolderRepository $projectHolderRepository)
     {
         $this->projectHolderRepository = $projectHolderRepository;
     }
 
-
-    /**
-     * @param AddProjectHolderRequest $request
-     * @param AddProjectHolderPresenterInterface $presenter
-     */
-    public function execute(AddProjectHolderRequest $request, AddProjectHolderPresenterInterface $presenter) {
-        $projectHolder =  new ProjectHolder($request->getId(), $request->getFirstName(), $request->getLastName(),$request->getEmail(), $request->getPassword(), $request->getState(),$request->getPhoto(), $request->getBio(),$request->getBirthday());
+    public function execute(AddProjectHolderRequest $request, AddProjectHolderPresenterInterface $presenter): void {
+        $projectHolder =  new ProjectHolder(null, $request->firstName, $request->lastName, $request->email, $request->password, $request->state,$request->photo, $request->bio,$request->birthday);
 
         $this->projectHolderRepository->add($projectHolder);
 

@@ -4,6 +4,8 @@
 namespace App\Domain\User\UseCases\ProjectHolder\FindAllProjectHolder;
 
 
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 interface FindAllProjectHolderPresenterInterface
 {
     /**
@@ -11,5 +13,10 @@ interface FindAllProjectHolderPresenterInterface
      * @return mixed
      */
     public function present(FindAllProjectHolderResponse $projectHolder);
+
+    /**
+     * @return JsonResponse
+     */
+    public function getResponse() : JsonResponse;
 
 }

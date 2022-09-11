@@ -4,7 +4,7 @@
 namespace App\Domain\User\UseCases\Contributor\UpDateContributor;
 
 
-use DateTimeImmutable;
+use DateTime;
 
 class UpdateContributorRequest
 {
@@ -39,9 +39,9 @@ class UpdateContributorRequest
     public ?string $state = null;
 
     /**
-     * @var DateTimeImmutable|null
+     * @var DateTime|null
      */
-    public ?DateTimeImmutable $birthday = null;
+    public ?DateTime $birthday = null;
 
     /**
      * @param int|null $id
@@ -50,9 +50,9 @@ class UpdateContributorRequest
      * @param string|null $email
      * @param string|null $password
      * @param string|null $state
-     * @param DateTimeImmutable|null $birthday
+     * @param DateTime|null $birthday
      */
-    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTimeImmutable $birthday)
+    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?DateTime $birthday)
     {
         $this->id = $id;
         $this->firstName = $firstName;

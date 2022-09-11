@@ -10,14 +10,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DeleteContributorJsonPresenter implements DeleteContributorPresenterInterface
 {
-    private $is_deleted;
+    private ?bool $is_deleted = null;
 
     /**
      * @inheritDoc
      */
     public function present(DeleteContributorResponse $response): void
     {
-       $this->is_deleted = $response->success;
+       $this->is_deleted = $response->status;
     }
 
     /**

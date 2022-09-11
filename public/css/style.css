@@ -643,10 +643,7 @@ progress {
     content: "\2014\00A0";
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .img-thumbnail {
     padding: 0.25rem;
@@ -806,6 +803,13 @@ progress {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 25%;
+}
+
+.garage-title {
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .col-4 {

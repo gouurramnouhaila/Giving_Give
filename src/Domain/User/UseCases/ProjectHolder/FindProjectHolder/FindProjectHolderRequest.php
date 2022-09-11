@@ -6,11 +6,21 @@ namespace App\Domain\User\UseCases\ProjectHolder\FindProjectHolder;
 
 class FindProjectHolderRequest
 {
+    private ?int $id = null;
 
-    public $idProjectHolder;
-
-    public function __construct($idProjectHolder)
+    /**
+     * @param int|null $id
+     */
+    public function __construct(?int $id)
     {
-        $this->idProjectHolder = $idProjectHolder;
+        $this->id = $id;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 }

@@ -6,26 +6,27 @@ namespace App\Domain\User\Adapters\Controllers\ProjectHolder\UpDateProjectHolder
 
 use App\Domain\User\UseCases\ProjectHolder\UpDateProjectHolder\UpDateProjectHolder;
 use App\Domain\User\UseCases\ProjectHolder\UpDateProjectHolder\UpDateProjectHolderRequest;
+use Exception;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class UpDateProjectHolderController
 {
-
     /**
      * @param Request $request
      * @param UpDateProjectHolder $useCase
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     * @Route(path="/projectHolder/{id}/update",name="app_projectHolder_update")
+     * @return JsonResponse
+     * @Route(path="/api/projectHolder/update/{id}",name="app_projectHolder_update")
+     * @throws Exception
      */
-    public function __invoke(Request $request,UpDateProjectHolder $useCase)
+    public function __invoke(Request $request,UpDateProjectHolder $useCase): JsonResponse
     {
         $presenter = new UpDateProjectHolderJsonPresenter();
 
         $data = json_decode($request->getContent(), true);
-        $id = intval( $request->get('id'));
 
-        $requestDto = new UpDateProjectHolderRequest( $id,$data['firstName'], $data['lastName'], $data['email'], $data['password'], $data['state'],$data['photo'], $data['bio'],new \DateTime($data['birthday']));
+        $requestDto = new UpDateProjectHolderRequest((int) $request->get('id'),$data['firstName'], $data['lastName'], $data['email'], $data['password'], null,$data['photo'], $data['bio'],new \DateTime($data['birthday']));
 
         $useCase->execute($requestDto, $presenter);
 

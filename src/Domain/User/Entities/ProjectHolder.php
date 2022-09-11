@@ -6,63 +6,36 @@ namespace App\Domain\User\Entities;
 
 class ProjectHolder
 {
-    /**
-     * @var int
-     */
-    private int $id;
+    private ?int $id = null;
+
+    private ?string $firstName = null;
+
+    private ?string $lastName = null;
+
+    private ?string $email = null;
+
+    private ?string $password = null;
+
+    private ?string $state = null;
+
+    private ?string $photo = null;
+
+    private ?string $bio = null;
+
+    private ?\DateTime $birthday = null;
 
     /**
-     * @var string
+     * @param int|null $id
+     * @param string|null $firstName
+     * @param string|null $lastName
+     * @param string|null $email
+     * @param string|null $password
+     * @param string|null $state
+     * @param string|null $photo
+     * @param string|null $bio
+     * @param \DateTime|null $birthday
      */
-    private string $firstName;
-
-    /**
-     * @var string
-     */
-    private string $lastName;
-
-    /**
-     * @var string
-     */
-    private string $email;
-
-    /**
-     * @var string
-     */
-    private string $password;
-
-    /**
-     * @var string
-     */
-    private string $state;
-
-    /**
-     * @var string
-     */
-    private string $photo;
-
-    /**
-     * @var string
-     */
-    private string $bio;
-
-    /**
-     * @var \DateTime
-     */
-    private \DateTime $birthday;
-
-    /**
-     * ProjectHolder constructor.
-     * @param $firstName
-     * @param $lastName
-     * @param $email
-     * @param $password
-     * @param $verify
-     * @param $photo
-     * @param $bio
-     * @param $birthday
-     */
-    public function __construct($id,$firstName, $lastName, $email, $password, $state, $photo, $bio, $birthday)
+    public function __construct(?int $id, ?string $firstName, ?string $lastName, ?string $email, ?string $password, ?string $state, ?string $photo, ?string $bio, ?\DateTime $birthday)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -76,145 +49,146 @@ class ProjectHolder
     }
 
     /**
-     * @return mixed
+     * @param int|null $id
      */
-    public function getFirstName()
+    public function setId(?int $id): void
     {
-        return $this->firstName;
+        $this->id = $id;
     }
 
     /**
-     * @param mixed $firstName
+     * @param string|null $firstName
      */
-    public function setFirstName($firstName): void
+    public function setFirstName(?string $firstName): void
     {
         $this->firstName = $firstName;
     }
 
     /**
-     * @return mixed
+     * @param string|null $lastName
      */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * @param mixed $lastName
-     */
-    public function setLastName($lastName): void
+    public function setLastName(?string $lastName): void
     {
         $this->lastName = $lastName;
     }
 
     /**
-     * @return mixed
+     * @param string|null $email
      */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email): void
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
     }
 
     /**
-     * @return mixed
+     * @param string|null $password
      */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password): void
+    public function setPassword(?string $password): void
     {
         $this->password = $password;
     }
 
     /**
-     * @return string
+     * @param string|null $state
      */
-    public function getState(): string
-    {
-        return $this->state;
-    }
-
-    /**
-     * @param string $state
-     */
-    public function setState(string $state): void
+    public function setState(?string $state): void
     {
         $this->state = $state;
     }
 
-
     /**
-     * @return mixed
+     * @param string|null $photo
      */
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
-     * @param mixed $photo
-     */
-    public function setPhoto($photo): void
+    public function setPhoto(?string $photo): void
     {
         $this->photo = $photo;
     }
 
     /**
-     * @return mixed
+     * @param string|null $bio
      */
-    public function getBio()
-    {
-        return $this->bio;
-    }
-
-    /**
-     * @param mixed $bio
-     */
-    public function setBio($bio): void
+    public function setBio(?string $bio): void
     {
         $this->bio = $bio;
     }
 
     /**
-     * @return \DateTime
+     * @param \DateTime|null $birthday
      */
-    public function getBirthday(): \DateTime
-    {
-        return $this->birthday;
-    }
-
-    /**
-     * @param \DateTime $birthday
-     */
-    public function setBirthday(\DateTime $birthday): void
+    public function setBirthday(?\DateTime $birthday): void
     {
         $this->birthday = $birthday;
     }
 
-
-
     /**
-     * @return mixed
+     * @return int|null
      */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
 
+    /**
+     * @return string|null
+     */
+    public function getLastName(): ?string
+    {
+        return $this->lastName;
+    }
 
+    /**
+     * @return string|null
+     */
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
 
+    /**
+     * @return string|null
+     */
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getState(): ?string
+    {
+        return $this->state;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBio(): ?string
+    {
+        return $this->bio;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getBirthday(): ?\DateTime
+    {
+        return $this->birthday;
+    }
 }

@@ -6,7 +6,9 @@ namespace App\Domain\User\Adapters\Controllers\Contributor\FindAllContributor;
 
 use App\Domain\User\Adapters\Controllers\ProjectHolder\FindAllProjectHolder\FindAllProjectHolderJsonPresenter;
 use App\Domain\User\UseCases\Contributor\FindAllContributor\FindAllContributor;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\SerializerInterface;
 
 class FindAllContributorController
@@ -15,12 +17,12 @@ class FindAllContributorController
     /**
      * @param FindAllContributor $useCase
      * @param Serializer $serializer
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     * @Route(path="/contributors",name="app_contributor_all")
+     * @return JsonResponse
+     * @Route(path="/api/contributors",name="app_contributor_all")
      */
-    public function __invoke(FindAllContributor $useCase,SerializerInterface $serializer)
+    public function __invoke(FindAllContributor $useCase,SerializerInterface $serializer): JsonResponse
     {
-        $presenter = new FindAllContributorJsonPresenter();
+        $presenter = new FindAllContributorJsonPresenter($serializer);
 
         $useCase->execute($presenter);
 

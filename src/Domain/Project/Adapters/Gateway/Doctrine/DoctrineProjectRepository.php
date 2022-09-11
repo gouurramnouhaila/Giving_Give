@@ -11,6 +11,7 @@ use App\Domain\Project\Adapters\Gateway\Doctrine\Project as ProjectDoctrine;
 use App\Domain\Project\Entities\ProjectRepository;
 use App\Domain\User\Adapters\Gateway\Doctrine\DoctrineProjectHolderRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 use phpDocumentor\Reflection\Types\Boolean;
 use phpDocumentor\Reflection\Types\This;
@@ -47,10 +48,10 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
      */
     public function add(Project $project): void
     {
-        $category = $this->categoryRepository->find($project->getIdCategory());
+       // $category = $this->categoryRepository->find($project->getIdCategory());
         $projectHolder = $this->projectHolderRepository->find($project->getProjectHolderId());
 
-        $project = new ProjectDoctrine($project->getTitle(),$project->getDescription(),$project->getPhoto(),$project->getVideo(),$project->getObjectiveFund(),$category, $projectHolder);
+        $project = new ProjectDoctrine($project->getTitle(),$project->getDescription(),$project->getPhoto(),$project->getVideo(),$project->getObjectiveFund(),null, $projectHolder);
 
         $project->setStatus("pending");
 
@@ -65,7 +66,7 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
      */
     public function delete(int $id): bool
     {
-        $project = $this->find($id);
+        $project = parent::find($id);
 
         if ($project === null) {
             throw new ProjectNotFoundException();
@@ -88,7 +89,7 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
      */
     public function update(Project $project): Project
     {
-        $projectDoctrine = $this->find($project->getId());
+        $projectDoctrine = $project = parent::find($project->getId());
 
         if (!$projectDoctrine) {
             throw new ProjectNotFoundException();
@@ -114,7 +115,7 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
 
          return new Project(
              $project->getId(),
-             $project->getId(),
+             $project->getTitle(),
              $project->getDescription(),
              $project->getPhoto(),
              $project->getVideo(),
@@ -129,7 +130,7 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
      */
     public function accept(int $id)
     {
-        $project = $this->find($id);
+        $project = parent::find($id);
 
         $project->setStatus('accepted');
 
@@ -142,7 +143,7 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
      */
     public function reject(int $id): void
     {
-        $project = $this->find($id);
+        $project = parent::find($id);
 
         $project->setStatus('refused');
 
@@ -152,6 +153,11 @@ class DoctrineProjectRepository extends ServiceEntityRepository implements Proje
 
    public function search(string $keyword)
    {
-        return $this->findOneBy(['title' => $keyword]);
+       $query = $this->getEntityManager()->createQuery(
+           'SELECT p
+            FROM \App\Domain\Project\Adapters\Gateway\Doctrine\Project p WHERE p.title LIKE :keyword'
+       )->setParameter('keyword', '%'.$keyword.'%');
+
+       return $query->getResult();
    }
 }

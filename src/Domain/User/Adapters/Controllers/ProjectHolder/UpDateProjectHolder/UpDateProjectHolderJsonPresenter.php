@@ -7,29 +7,27 @@ namespace App\Domain\User\Adapters\Controllers\ProjectHolder\UpDateProjectHolder
 use App\Domain\User\Entities\ProjectHolder;
 use App\Domain\User\UseCases\ProjectHolder\UpDateProjectHolder\UpDateProjectHolderPresenterInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Mailer\Header\TagHeader;
+
 
 class UpDateProjectHolderJsonPresenter implements UpDateProjectHolderPresenterInterface
 {
+    private ?int $id = null;
 
-    private  $id;
+    private ?string $firstName = null;
 
-    private  $firstName;
+    private ?string $lastName = null;
 
-    private  $lastName;
+    private ?string $email = null;
 
-    private  $email;
+    private ?string $password = null;
 
-    private  $password;
+    private ?string $state = null;
 
-    private  $state;
+    private ?string $photo = null;
 
-    private  $photo;
+    private ?string $bio = null;
 
-    private  $bio;
-
-    private $birthday;
-
+    private ?\DateTime $birthday = null;
 
     /**
      * @inheritDoc

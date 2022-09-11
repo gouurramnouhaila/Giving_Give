@@ -3,7 +3,7 @@
     "app": {
       "js": [
         "http://localhost:8080/build/runtime.js",
-        "http://localhost:8080/build/vendors-node_modules_fortawesome_free-solid-svg-icons_index_es_js-node_modules_fortawesome_re-4ab609.js",
+        "http://localhost:8080/build/vendors-node_modules_fortawesome_free-solid-svg-icons_index_es_js-node_modules_fortawesome_re-5c18c0.js",
         "http://localhost:8080/build/app.js"
       ],
       "css": [

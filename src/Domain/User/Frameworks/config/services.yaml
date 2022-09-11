@@ -67,6 +67,9 @@ services:
   App\Domain\User\Adapters\Controllers\Admin\FindAllAdmin\:
     resource: '../../../User/Adapters/Controllers/Admin/FindAllAdmin/'
     tags: ['controller.service_arguments']
+  App\Domain\User\Adapters\Controllers\Contributor\FindContributorsByProjectHolder\:
+    resource: '../../../User/Adapters/Controllers/Contributor/FindContributorsByProjectHolder/'
+    tags: [ 'controller.service_arguments' ]
 
 
 

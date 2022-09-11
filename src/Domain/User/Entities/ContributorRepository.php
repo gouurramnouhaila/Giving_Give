@@ -8,9 +8,9 @@ interface ContributorRepository
 {
     /**
      * @param Contributor $contributor
-     * @return mixed
+     * @return void
      */
-    public function add(Contributor $contributor);
+    public function add(Contributor $contributor): void;
 
     /**
      * @param int $id
@@ -19,19 +19,25 @@ interface ContributorRepository
     public function remove(int $id): bool;
 
     /**
-     * @param int $id
+     * @param Contributor $contributor
      * @return Contributor
      */
-    public function upDate(Contributor $contributor): \App\Domain\User\Adapters\Gateway\Doctrine\Contributor;
+    public function upDate(Contributor $contributor): Contributor;
 
     /**
      * @param int $id
      * @return Contributor
      */
-    public function findOne(int $id): \App\Domain\User\Adapters\Gateway\Doctrine\Contributor;
+    public function findOne(int $id): Contributor;
 
     /**
      * @return mixed
      */
     public function findAll();
+
+    /**
+     * @param int $idProjectHolder
+     * @return mixed
+     */
+    public function findContributorByProjectHolder(int $idProjectHolder): array;
 }

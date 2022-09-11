@@ -6,50 +6,50 @@ namespace App\Domain\User\Adapters\Controllers\Contributor\AddContributor;
 
 use App\Domain\User\Entities\Contributor;
 use App\Domain\User\UseCases\Contributor\AddContributor\AddContributorPresenterInterface;
+use DateTime;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class AddContributorJsonPresenter implements AddContributorPresenterInterface
 {
     /**
-     * @var int
+     * @var int|null
      */
-    private int $id;
+    private ?int $id = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $firstName;
+    private ?string $firstName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $lastName;
+    private ?string $lastName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $email;
+    private ?string $email = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $password;
+    private ?string $password = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $state;
-
+    private ?string $state = null;
 
     /**
-     * @var DateTime
+     * @var DateTime|null
      */
-    private \DateTime $birthday;
+    private ?DateTime $birthday = null;
 
     /**
      * @inheritDoc
      */
-    public function present(Contributor $contributor)
+    public function present(Contributor $contributor): void
     {
         $this->id = $contributor->getId();
         $this->firstName = $contributor->getFirstName();
@@ -60,7 +60,7 @@ class AddContributorJsonPresenter implements AddContributorPresenterInterface
         $this->birthday = $contributor->getBirthday();
     }
 
-    public function getResponse() {
+    public function getResponse(): JsonResponse {
         return new JsonResponse([
             'id' => $this->id,
             'firstName' => $this->firstName,
@@ -69,7 +69,6 @@ class AddContributorJsonPresenter implements AddContributorPresenterInterface
             'password' => $this->password,
             'state' => $this->state,
             'birthDay' => $this->birthday
-
         ]);
     }
 }

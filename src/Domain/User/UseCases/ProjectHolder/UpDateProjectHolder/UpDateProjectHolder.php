@@ -17,13 +17,12 @@ class UpDateProjectHolder
         $this->projectHolderRepository = $projectHolderRepository;
     }
 
-    public function execute(UpDateProjectHolderRequest $request,UpDateProjectHolderPresenterInterface $presenter) {
-        $projectHolder = $this->projectHolderRepository->find($request->getId());
+    public function execute(UpDateProjectHolderRequest $request,UpDateProjectHolderPresenterInterface $presenter): void {
 
-        $projectHolderEntity = new ProjectHolder($projectHolder->getId(), $request->getFirstName(), $request->getLastName(),$request->getEmail(), $request->getPassword(), $request->getState(), $request->getPhoto(), $request->getBio(),$request->getBirthday());
+        $projectHolder =  new ProjectHolder($request->id, $request->firstName, $request->lastName, $request->email, $request->password, $request->state,$request->photo, $request->bio,$request->birthday);
 
-        $projectHolderModify = $this->projectHolderRepository->upDate($projectHolderEntity);
+        $this->projectHolderRepository->upDate($projectHolder);
 
-        $presenter->present($projectHolderEntity);
+        $presenter->present($projectHolder);
     }
 }

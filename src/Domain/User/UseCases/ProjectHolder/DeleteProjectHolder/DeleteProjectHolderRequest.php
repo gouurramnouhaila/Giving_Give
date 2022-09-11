@@ -6,24 +6,21 @@ namespace App\Domain\User\UseCases\ProjectHolder\DeleteProjectHolder;
 
 class DeleteProjectHolderRequest
 {
-
-    private int $idProjectHolder;
+    private ?int $id = null;
 
     /**
-     * @param int $idProjectHolder
+     * @param int|null $id
      */
-    public function __construct(int $idProjectHolder)
+    public function __construct(?int $id)
     {
-        $this->idProjectHolder = $idProjectHolder;
+        $this->id = $id;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getIdProjectHolder(): int
+    public function getId(): ?int
     {
-        return $this->idProjectHolder;
+        return $this->id;
     }
-
-
 }

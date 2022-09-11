@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Domain\Don\:
+    resource: '../../../Don/*'
+    exclude: '../../../Don/{Frameworks,Tests}'
+
+
+  App\Domain\Don\Adapters\Controllers\MakeDonation\:
+    resource: '../../../Don/Adapters/Controllers/MakeDonation'
+    tags: ['controller.service_arguments']

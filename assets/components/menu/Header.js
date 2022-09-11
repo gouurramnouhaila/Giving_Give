@@ -1,9 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default class Header extends React.Component {
+
     render() {
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+
         return (
-            <div>
+            <div style={{fontFamily: 'system-ui',width: '1220px'}}>
                 <div className="wrapper row0">
                 <div id="topbar" className="hoc clear">
                     <div className="fl_left">
@@ -16,8 +20,8 @@ export default class Header extends React.Component {
                         <ul className="nospace">
                             <li><a href="#"><i className="fas fa-home"></i></a></li>
                             <li><a href="#" title="Help Centre"><i className="far fa-life-ring"></i></a></li>
-                            <li><a href="#" title="Login"><i className="fas fa-sign-in-alt"></i></a></li>
-                            <li><a href="#" title="Sign Up"><i className="fas fa-edit"></i></a></li>
+                            <li><Link to="/login" title="Login"><i className="fas fa-sign-in-alt"></i></Link></li>
+                            {!user ? <li><Link to="/register?role=p" title="register"><i className="fas fa-edit"></i></Link></li>: '' }
                             <li id="searchform">
                                 <div>
                                     <form action="#" method="post">
@@ -34,7 +38,7 @@ export default class Header extends React.Component {
                     </div>
                 </div>
             </div>
-                <div className="wrapper row1">
+                <div className="wrapper row1" style={{fontFamily: 'system-ui'}}>
                     <section id="ctdetails" className="hoc clear">
                         <ul className="nospace clear">
                             <li className="one_quarter first">

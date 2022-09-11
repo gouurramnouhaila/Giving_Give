@@ -33,6 +33,7 @@ class FindProjectJsonPresenter implements FindProjectPresenterInterface
      */
     public function present(Project $project): void
     {
+
         $this->id = $project->getId();
         $this->title = $project->getTitle();
         $this->description = $project->getDescription();

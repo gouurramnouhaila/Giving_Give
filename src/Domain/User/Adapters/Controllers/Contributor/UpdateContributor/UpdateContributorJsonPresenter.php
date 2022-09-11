@@ -6,45 +6,45 @@ namespace App\Domain\User\Adapters\Controllers\Contributor\UpdateContributor;
 
 use App\Domain\User\Entities\Contributor;
 use App\Domain\User\UseCases\Contributor\UpDateContributor\UpdateContributorPresenterInterface;
+use DateTime;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class UpdateContributorJsonPresenter implements UpdateContributorPresenterInterface
 {
     /**
-     * @var int
+     * @var int|null
      */
-    private int $id;
+    private ?int $id = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $firstName;
+    private ?string $firstName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $lastName;
+    private ?string $lastName = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $email;
+    private ?string $email = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $password;
+    private ?string $password = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private string $state;
-
+    private ?string $state = null;
 
     /**
-     * @var DateTime
+     * @var DateTime|null
      */
-    private \DateTime $birthday;
+    private ?DateTime $birthday = null;
 
     /**
      * @inheritDoc

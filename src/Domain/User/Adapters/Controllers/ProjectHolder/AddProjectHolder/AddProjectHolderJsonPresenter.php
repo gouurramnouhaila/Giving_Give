@@ -6,55 +6,27 @@ namespace App\Domain\User\Adapters\Controllers\ProjectHolder\AddProjectHolder;
 
 use App\Domain\User\Entities\ProjectHolder;
 use App\Domain\User\UseCases\ProjectHolder\AddProjectHolder\AddProjectHolderPresenterInterface;
-use App\Domain\User\ProjectHolder\AddProjectHolder\AddProjectHolderResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class AddProjectHolderJsonPresenter implements AddProjectHolderPresenterInterface{
 
-    /**
-     * @var int
-     */
-    private int $id;
+    private ?int $id = null;
 
-    /**
-     * @var string
-     */
-    private string $firstName;
+    private ?string $firstName = null;
 
-    /**
-     * @var string
-     */
-    private string $lastName;
+    private ?string $lastName = null;
 
-    /**
-     * @var string
-     */
-    private string $email;
+    private ?string $email = null;
 
-    /**
-     * @var string
-     */
-    private string $password;
+    private ?string $password = null;
 
-    /**
-     * @var string
-     */
-    private string $state;
+    private ?string $state = null;
 
-    /**
-     * @var string
-     */
-    private string $photo;
+    private ?string $photo = null;
 
-    /**
-     * @var string
-     */
-    private string $bio;
+    private ?string $bio = null;
 
-    /**
-     * @var \DateTime
-     */
-    private \DateTime $birthday;
+    private ?\DateTime $birthday = null;
 
 
     /**
@@ -73,7 +45,7 @@ class AddProjectHolderJsonPresenter implements AddProjectHolderPresenterInterfac
         $this->birthday = $projectHolder->getBirthday();
     }
 
-    public function getResponse() {
+    public function getResponse(): JsonResponse {
         return new JsonResponse([
             'id' => $this->id,
             'firstName' => $this->firstName,

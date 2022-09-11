@@ -12,14 +12,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class DeleteProjectHolderJsonPresenter implements DeleteProjectHolderPresenterInterface
 {
 
-    private $is_deleted;
+    private ?bool $is_deleted = null;
 
     /**
      * @inheritDoc
      */
-    public function present(DeleteProjectHolderResponse $deleteProjectHolderResponse)
+    public function present(DeleteProjectHolderResponse $deleteProjectHolderResponse): void
     {
-        $this->is_deleted = $deleteProjectHolderResponse->getSuccess();
+        $this->is_deleted = $deleteProjectHolderResponse->status;
     }
 
     public function getResponse(): JsonResponse

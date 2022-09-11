@@ -3,11 +3,6 @@ import '../../styles/layout/styles/inputFileStyle.css';
 import '../../styles/layout/scripts/form';
 import UserMenu from "./UserMenu";
 import InfoPersonel from "./InfoPersonel";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MyFavourites from "./MyFavourites";
-import MyContributions from "./MyContributions";
-import MyProjects from "./MyProjects";
-import Home from "../Home";
 
 
 export default class Profile extends React.Component {
@@ -18,7 +13,7 @@ export default class Profile extends React.Component {
                 <div>
                     <UserMenu />
                 </div>
-                <div style={{marginLeft: "140px"}}>
+                <div  >
                     <InfoPersonel />
                 </div>
             </div>

@@ -5,7 +5,6 @@ namespace App\Domain\Project\UseCase\SearchProject;
 
 
 use App\Domain\Project\Adapters\Gateway\Doctrine\DoctrineProjectRepository;
-use App\Domain\Project\Entities\Project;
 
 class SearchProject
 {
@@ -23,8 +22,6 @@ class SearchProject
     public function execute(SearchProjectRequest $request, SearchProjectPresenterInterface $presenter) {
         $projects = $this->projectRepository->search($request->keyword);
 
-        $response = new SearchProjectResponse($projects);
-
-        $presenter->present($response);
+        $presenter->present(new SearchProjectResponse($projects));
     }
 }

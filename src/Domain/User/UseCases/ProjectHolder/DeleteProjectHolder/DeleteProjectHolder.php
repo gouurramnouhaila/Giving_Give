@@ -5,6 +5,7 @@ namespace App\Domain\User\UseCases\ProjectHolder\DeleteProjectHolder;
 
 
 use App\Domain\User\Adapters\Gateway\Doctrine\DoctrineProjectHolderRepository;
+use App\Domain\User\Entities\Exception\ProjectHolderNotFound;
 
 
 class DeleteProjectHolder
@@ -17,12 +18,11 @@ class DeleteProjectHolder
     }
 
     /**
-     * @param DeleteProjectHolderRequest $request
-     * @param DeleteProjectHolderPresenterInterface $presenter
+     * @throws ProjectHolderNotFound
      */
-    public function execute(DeleteProjectHolderRequest $request, DeleteProjectHolderPresenterInterface $presenter) {
+    public function execute(DeleteProjectHolderRequest $request, DeleteProjectHolderPresenterInterface $presenter): void {
 
-        $res = $this->projectHolderRepository->remove($request->getIdProjectHolder());
+        $res = $this->projectHolderRepository->remove($request->getId());
 
         $presenter->present(new DeleteProjectHolderResponse($res));
     }

@@ -6,10 +6,15 @@ namespace App\Domain\User\UseCases\ProjectHolder\FindAllProjectHolder;
 
 class FindAllProjectHolderResponse
 {
-    public $projectHolders;
+    public ?array $projectHolders = null;
 
-    public function __construct($projectHolders)
+    /**
+     * @param array|null $projectHolders
+     */
+    public function __construct(?array $projectHolders)
     {
         $this->projectHolders = $projectHolders;
     }
+
+
 }

@@ -1,140 +1,145 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import '../../styles/layout/styles/inputFileStyle.css';
 import '../../styles/layout/scripts/form';
+import img from './startP.png';
+import {useNavigate} from "react-router-dom";
 
-export default class AddProject extends React.Component {
+export default function  AddProject(props) {
 
-    constructor() {
-        super();
+    const title = useRef(null);
+    const description = useRef(null);
+    const fundObjective = useRef(null);
+    const slogan = useRef(null);
+    const image = useRef(null);
+    const video = useRef(null);
+    const category = useRef(null);
+    const [categoryP, setCategoryP] = useState("");
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    const navigate = useNavigate();
 
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
-        this.title = React.createRef();
-        this.description = React.createRef();
-        this.fundObjective = React.createRef();
-        this.slogan = React.createRef();
-        this.image = React.createRef();
-        this.video = React.createRef();
+    const handleClickAfterLogin = () => {
+        navigate(`/${user.firstName}/projects/`)
     }
 
-     handleFormSubmit(event) {
+    const handleFormSubmit = (event) => {
         event.preventDefault();
 
-        const { onNewProjectSubmit } = this.props;
+        const { onNewProjectSubmit } = props;
 
-        const title = this.title.current;
-        const description = this.description.current;
-        const fundObjective = this.fundObjective.current;
-        const slogan = this.slogan.current;
-        const image = this.image.current;
-        const video = this.video.current;
-
-        console.log("I love when a good form submit");
-
-        onNewProjectSubmit(title.value, description.value, fundObjective.value, slogan.value, image.value, video.value);
-     }
+        onNewProjectSubmit(title.current.value, description.current.value, fundObjective.current.value, image.current.value, video.current.value,category.current.value);
+        handleClickAfterLogin();
+    }
 
 
-    render() {
-
-        return (
-            <div className="container-fluid px-1 py-5 mx-auto mt-4">
-                <div className="row d-flex justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center mt-4">
-                        <h3>Create Your Project</h3>
-                        <p className="text-primary">Just answer a few questions<br /> so that we can personalize the right
-                            experience for you.</p>
-                        <div className="card">
-                            <h5 className="text-center mb-4">Presentation</h5>
-                            <form className="form-card" onSubmit={ this.handleFormSubmit }>
-                                <div className="row justify-content-between text-left">
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Title <span className="text-danger"> *</span>
-                                        </label>
-                                        <input type="text" id="title" ref={ this.title } />
-                                    </div>
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Project description
-                                            <span className="text-danger"> *</span>
-                                        </label>
-                                        <input type="text" id="description" ref={ this.description } className="in"/>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-between text-left">
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Fund Objective <span className="text-danger"> *</span>
-                                        </label>
-                                        <input type="number" id="obejFund" ref={this.fundObjective} />
-                                    </div>
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Slogan for your projet <span className="text-danger"> *</span>
-                                        </label>
-                                        <textarea ref={this.slogan}></textarea>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-between text-left">
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Cover image
-                                            <span className="text-danger"> *</span>
-                                        </label>
-                                        <input type="file" id="photo" ref={this.image} />
-                                        <div className="alert alert-primary" role="alert">
-                                            <b>Choose your cover image carefully:</b>
-                                            <ul>
-                                                <li>Add a well framed visual, of good quality (not pixelated) and which represents your project well.
-                                                </li>
-                                                <li>Keep the visual simple: no need to add text or make a GIF to convince. Your visual is always accompanied by the title of your project and prefer the description to go into details.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            Presentation video (recommended)
-                                        </label>
-                                        <input type="file" id="video" ref={this.video} />
-                                        <div className="alert alert-primary" role="alert">
-                                            <ul>
-                                                <li>your presentation will be effective with a video of 2 minutes maximum
-                                                </li>
-                                                <li>make sure your video is viewable
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-between text-left">
-                                    <div className="form-group col-sm-6 flex-column d-flex">
-                                        <label className="form-control-label px-3">
-                                            What will the collection be used for? <span className="text-danger"> *</span>
-                                        </label>
-                                        <input type="text" id="obejFund" name="obejFund" />
-                                    </div>
-                                </div>
-                                <div className="fac alert">
-                                    <h3 className="font"><b>FAQ</b></h3>
-                                    <a href="#" className="text-primary hr">
-                                         + Add a Question
-                                    </a>
-                                </div>
-
-                                <div className="row justify-content-end">
-                                    <div className="form-group col-sm-6">
-                                        <button type="submit" className="btn-block btn-primary">Save</button>
-                                    </div>
-                                </div>
-                            </form>
+    return (
+        <div className="container-fluid px-1 py-5 mx-auto mt-4">
+            <div className="row d-flex justify-content-center" style={{marginRight: '500px'}} >
+                <div className="col-xl-7 col-lg-8 col-md-9 col-12 mt-4">
+                    <div style={{width: '600px',marginLeft: '165px'}}>
+                        <div>
+                            <img src={img} style={{width: '200px',height: '200px',marginLeft: '198px'}}/>
                         </div>
+                        <h2 style={{marginLeft: '44px'}}>Let’s get ready to start your campaign!</h2>
+                        <p style={{textAlign: 'center'}}>
+                            We want to create the best onboarding for you –<b /> please fill out the information below.<b /> Your answers will be locked for this campaign and can’t be changed later.
+                        </p>
+                    </div>
+
+                    <div className="card" style={{fontFamily: 'system-ui'}}>
+                        <div style={{marginLeft: '85px',marginTop: '70px'}}>
+                            <div className="form-control-label mb-2">
+                                Who are you raising money for?
+                                <h6 className="text-secondary">
+                                    Please choose the type of account that will be receiving your funds.
+                                </h6>
+                                <fieldset>
+                                    <div className="some-class">
+                                        <input type="radio" className="radio" name="individual" value="individual" id="individual"/>
+                                        <label htmlFor="individual">individual</label>
+                                        <input type="radio" className="radio" name="Business" value="Business" id="Business"/>
+                                        <label htmlFor="Business">Business</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <form className="form-card" onSubmit={ handleFormSubmit } style={{marginLeft: '100px'}}>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        What is the name of your company or project?This question is required <span className="text-danger"> *</span>
+                                    </label>
+                                    <input type="text" id="title" ref={ title } required />
+                                </div>
+                            </div>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        In which sector does your company operate?
+                                    </label>
+                                    <select className="form-select" aria-label="Default select example"
+                                            ref={ category }
+                                    >
+                                        <option>Open this select menu</option>
+                                        <option value="1">Mode & Design</option>
+                                        <option value="2">Musique</option>
+                                        <option value="3">Jeux</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        Can you tell us more about giving give?This question is required <span className="text-danger"> *</span><br/>
+                                        <b className="min-text">
+                                            2 or 3 lines to understand your business, your sector and the purpose of this financing.
+                                        </b>
+                                    </label>
+                                    <textarea id="description" ref={ description } required></textarea>
+                                </div>
+                            </div>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        What is your fundraising goal?This question is required * ? <br/>
+                                    </label>
+                                    <input type="number" id="obejFund" ref={ fundObjective } required />
+                                </div>
+                            </div>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        Choose a cover image for your project*  <br/>
+                                    </label>
+                                    <input type="file" id="photo" ref={ image } required />
+                                </div>
+                            </div>
+                            <div className="row justify-content-between text-left mt-5">
+                                <div className="form-group ">
+                                    <label className="form-control-label mb-2">
+                                        You can add a video to present your project (recommended)  <br/>
+                                    </label>
+                                    <input type="file" id="video" ref={ video } required />
+                                </div>
+                            </div>
+                            <div className="fac alert mt-3 mb-3" style={{width: '600px'}}>
+                                <h3 className="font"><b>FAQ</b></h3>
+                                <a href="#" className="text-primary hr">
+                                     + Add a Question
+                                </a>
+                            </div>
+                            <div className="row justify-content-end" style={{marginRight: '85px'}}>
+                                <div className="form-group col-sm-6">
+                                    <button type="submit" className="btn-block btn-primary mt-3">Save</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+
 }
 
 AddProject.propTypes = {

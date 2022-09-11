@@ -6,20 +6,27 @@ namespace App\Domain\User\Adapters\Controllers\ProjectHolder\FindAllProjectHolde
 
 use App\Domain\User\Adapters\Controllers\ProjectHolder\FindAllProjectHolder\FindAllProjectHolderJsonPresenter;
 use App\Domain\User\UseCases\ProjectHolder\FindAllProjectHolder\FindAllProjectHolder;
+use Lexik\Bundle\JWTAuthenticationBundle\Event\JWTCreatedEvent;
+use Lexik\Bundle\JWTAuthenticationBundle\Event\JWTDecodedEvent;
+use Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle;
+use Lexik\Bundle\JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Event\AuthenticationSuccessEvent;
 use Symfony\Component\Serializer\SerializerInterface;
 
 class FindAllProjectHolderController
 {
+
     /**
-     * @Route(path="/projectHolders",name="app_projectHolders_all")
+     * @Route(path="/api/projectHolders",name="app_projectHolders_all")
      */
-    public function __invoke(FindAllProjectHolder $useCase,SerializerInterface $serializer)
+    public function __invoke(FindAllProjectHolder $useCase,SerializerInterface $serializer): JsonResponse
     {
-        $presenter = new FindAllProjectHolderJsonPresenter();
+        $presenter = new FindAllProjectHolderJsonPresenter($serializer);
 
         $useCase->execute($presenter);
 
-        return $presenter->getResponse($serializer);
+        return $presenter->getResponse();
     }
 }

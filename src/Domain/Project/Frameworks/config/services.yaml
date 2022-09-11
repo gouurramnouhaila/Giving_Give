@@ -12,6 +12,8 @@ services:
     resource: '../../../Project/Adapters/Controllers/AddProject'
     tags: ['controller.service_arguments']
 
+
+
   App\Domain\Project\Adapters\Controllers\DeleteProject\:
     resource: '../../../Project/Adapters/Controllers/DeleteProject'
     tags: ['controller.service_arguments']
@@ -39,4 +41,15 @@ services:
   App\Domain\Project\Adapters\Controllers\RejectProject\:
     resource: '../../../Project/Adapters/Controllers/RejectProject'
     tags: ['controller.service_arguments']
+
+  App\Domain\Project\Adapters\Controllers\FindProjectByUser\:
+    resource: '../../../Project/Adapters/Controllers/FindProjectByUser'
+    tags: [ 'controller.service_arguments' ]
+
+  App\Domain\Project\Adapters\Controllers\Category\ListCategory\:
+    resource: '../../../Project/Adapters/Controllers/Category/ListCategory'
+    tags: [ 'controller.service_arguments' ]
+
+
+
 

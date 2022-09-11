@@ -24,6 +24,7 @@ class FindProject
 
         $project = $this->projectRepository->find($request->getId());
 
+
         $presenter->present($project);
     }
 }

@@ -3,61 +3,29 @@
 
 namespace App\Domain\User\Adapters\Controllers\ProjectHolder\FindProjectHolder;
 
-
-use App\Domain\User\Adapters\Gateway\Doctrine\ProjectHolder;
+use App\Domain\User\Entities\ProjectHolder;
 use App\Domain\User\UseCases\ProjectHolder\FindProjectHolder\FindProjectHolderPresenterInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class FindProjectHolderJsonPresenter implements FindProjectHolderPresenterInterface
 {
+    private ?int $id = null;
 
+    private ?string $firstName = null;
 
-    /**
-     * @var int
-     */
-    private int $id;
+    private ?string $lastName = null;
 
-    /**
-     * @var string
-     */
-    private string $firstName;
+    private ?string $email = null;
 
-    /**
-     * @var string
-     */
-    private string $lastName;
+    private ?string $password = null;
 
-    /**
-     * @var string
-     */
-    private string $email;
+    private ?string $state = null;
 
-    /**
-     * @var string
-     */
-    private string $password;
+    private ?string $photo = null;
 
-    /**
-     * @var string
-     */
-    private string $state;
+    private ?string $bio = null;
 
-    /**
-     * @var string
-     */
-    private string $photo;
-
-    /**
-     * @var string
-     */
-    private string $bio;
-
-    /**
-     * @var \DateTime
-     */
-    private \DateTime $birthday;
-
-
+    private ?\DateTime $birthday = null;
     /**
      * @inheritDoc
      */
@@ -74,7 +42,7 @@ class FindProjectHolderJsonPresenter implements FindProjectHolderPresenterInterf
         $this->birthday = $projectHolder->getBirthday();
     }
 
-    public function getResponse() {
+    public function getResponse(): JsonResponse {
         return new JsonResponse([
             'id' => $this->id,
             'firstName' => $this->firstName,

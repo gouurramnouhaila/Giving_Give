@@ -3,16 +3,17 @@
 
 namespace App\Domain\Project\UseCase\ListProjects;
 
-
-use phpDocumentor\Reflection\Project;
-
 class ListProjectsResponse
 {
-    public $projects;
+    public ?array $projects = null;
 
-
-    public function __construct($projects)
+    /**
+     * @param array|null $projects
+     */
+    public function __construct(?array $projects)
     {
         $this->projects = $projects;
     }
+
+
 }

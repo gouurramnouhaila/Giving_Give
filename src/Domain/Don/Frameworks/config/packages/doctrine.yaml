@@ -1,0 +1,12 @@
+doctrine:
+  orm:
+    auto_generate_proxy_classes: true
+    naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+    auto_mapping: true
+    mappings:
+      don_mapping:
+        is_bundle: false
+        type: annotation
+        dir: '%kernel.project_dir%/src/Domain/Don/Adapters/Gateway/Doctrine'
+        prefix: 'App\Domain\Don\Adapters\Gateway\Doctrine'
+        alias: App\Domain\Don\Adapters\Gateway\Doctrine

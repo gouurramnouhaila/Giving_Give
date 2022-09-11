@@ -4,7 +4,6 @@
 namespace App\Domain\Project\Adapters\Controllers\RejectProject;
 
 
-use App\Domain\Project\Entities\Exceptions\ProjectNotFoundException;
 use App\Domain\Project\UseCase\RejectProject\RejectProject;
 use App\Domain\Project\UseCase\RejectProject\RejectProjectRequest;
 use Symfony\Component\HttpFoundation\JsonResponse;

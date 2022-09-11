@@ -4,15 +4,19 @@
 namespace App\Domain\User\Adapters\Gateway\Doctrine;
 
 
+use DateTime;
+use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 
 /**
 * Class Contributor
  * @package App\Domain\User\Adapters\Gateway\Doctrine
 * @ORM\Entity(repositoryClass="DoctrineContributorRepository")
-*/
-class Contributor
+ * @method string getUserIdentifier()
+ */
+class Contributor implements UserInterface
 {
     /**
      * @ORM\Id
@@ -44,7 +48,7 @@ class Contributor
     /**
      * @ORM\Column(type="string")
      */
-    private string $state;
+    private ?string $state;
 
 
     /**
@@ -58,16 +62,19 @@ class Contributor
     private $notifications;
 
     /**
-     * Contributor constructor.
+     * @ORM\OneToMany(targetEntity="App\Domain\Don\Adapters\Gateway\Doctrine\Don", mappedBy="contributor")
+     */
+    private $dons;
+
+    /**
      * @param string $firstName
      * @param string $lastName
      * @param string $email
      * @param string $password
-     * @param string $state
-     * @param \DateTime $birthday
-     * @param $notifications
+     * @param string|null $state
+     * @param DateTime|null $birthday
      */
-    public function __construct(string $firstName, string $lastName, string $email, string $password, string $state, \DateTime $birthday, $notifications)
+    public function __construct(string $firstName, string $lastName, string $email, string $password, ?string $state = 'pending', ?DateTime $birthday = null)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -75,7 +82,6 @@ class Contributor
         $this->password = $password;
         $this->state = $state;
         $this->birthday = $birthday;
-        $this->notifications = $notifications;
     }
 
     /**
@@ -194,9 +200,9 @@ class Contributor
 
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getBirthday(): \DateTime
+    public function getBirthday(): DateTime
     {
         return $this->birthday;
     }
@@ -204,10 +210,34 @@ class Contributor
     /**
      * @param DateTime $birthday
      */
-    public function setBirthday(\DateTime $birthday): void
+    public function setBirthday(DateTime $birthday): void
     {
         $this->birthday = $birthday;
     }
 
 
+    public function getRoles()
+    {
+        // TODO: Implement getRoles() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getUsername()
+    {
+        // TODO: Implement getUsername() method.
+    }
+
+    public function __call(string $name, array $arguments)
+    {
+        // TODO: Implement @method string getUserIdentifier()
+    }
 }

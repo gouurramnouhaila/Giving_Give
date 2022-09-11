@@ -26,22 +26,16 @@ class Category
      private $name;
 
     /**
+     * @ORM\Column(type="string",nullable=true)
+     */
+     private $photo;
+
+    /**
      * @ORM\OneToMany(targetEntity="App\Domain\Project\Adapters\Gateway\Doctrine\Project", mappedBy="category")
      */
      private $projects;
 
 
-
-    /**
-     * Category constructor.
-     * @param $id
-     * @param $name
-     */
-    public function __construct($id, $name)
-    {
-        $this->id = $id;
-        $this->name = $name;
-    }
 
     /**
      * @return mixed
@@ -68,7 +62,26 @@ class Category
         $this->name = $name;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
 
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo): void
+    {
+        $this->photo = $photo;
+    }
+
+    public function toString()
+    {
+        return $this->getName() ."  ". $this->getPhoto();
+    }
 
 
 }

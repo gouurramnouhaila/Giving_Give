@@ -89,20 +89,22 @@ h3 {
     background-color: var(--color-bg-secondary);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
-    top: 200;
-    left: 10;
+    top: 0;
+    left: 0;
     width: 270px;
-    margin-top: 190px;
+    margin-top: 400px;
     margin-left: 50px;
+    height: 400px;
 }
 .menu.settings {
     width: 300px !important;
 }
 .menu-list {
-    margin: 0;
+    margin-bottom: 100px;
     display: block;
     width: 100%;
     padding: 8px;
+    height: 70px;
 }
 .menu-list, ul {
     list-style-type: none;

@@ -8,14 +8,9 @@ use App\Domain\User\Entities\ContributorRepository;
 
 class DeleteContributor
 {
-    /**
-     * @var ContributorRepository
-     */
+
     private ContributorRepository $contributorRepository;
 
-    /**
-     * @param ContributorRepository $contributorRepository
-     */
     public function __construct(ContributorRepository $contributorRepository)
     {
         $this->contributorRepository = $contributorRepository;

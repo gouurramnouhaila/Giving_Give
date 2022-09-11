@@ -54,6 +54,11 @@ class Project
     private ?ProjectHolder $projectHolder = null;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Domain\Don\Adapters\Gateway\Doctrine\Don", mappedBy="project")
+     */
+    private $dons;
+
+    /**
      * @Assert\Length(
      *      min = 2,
      *      max = 50,
@@ -85,30 +90,11 @@ class Project
     private  $objectiveFund;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      *
      */
     private $status;
 
-    /**
-     * @param $title
-     * @param $description
-     * @param $photo
-     * @param $video
-     * @param $objectiveFund
-     * @param Category|null $category
-     * @param ProjectHolder|null $projectHolder
-     */
-    public function __construct($title, $description, $photo, $video, $objectiveFund,?Category $category,?ProjectHolder $projectHolder)
-    {
-        $this->title = $title;
-        $this->description = $description;
-        $this->photo = $photo;
-        $this->video = $video;
-        $this->objectiveFund = $objectiveFund;
-        $this->category = $category;
-        $this->projectHolder = $projectHolder;
-    }
 
     /**
      * @return mixed

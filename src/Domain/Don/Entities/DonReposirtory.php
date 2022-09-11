@@ -7,9 +7,9 @@ namespace App\Domain\Don\Entities;
 interface DonReposirtory
 {
     /**
-     * @param float $amount
+     * @param Don $don
      * @return Don
      */
-    public function makeDonation(float $amount): Don;
+    public function makeDonation(Don $don): Don;
 
 }

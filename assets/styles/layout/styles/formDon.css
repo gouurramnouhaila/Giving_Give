@@ -4,4 +4,15 @@
     margin-right: 200px;
     color: red;
 }
-
+.display-one-line{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 440px;
+    margin-left: 103px;
+}
+.display-one-line-s {
+    width: 440px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 100px;
+}
